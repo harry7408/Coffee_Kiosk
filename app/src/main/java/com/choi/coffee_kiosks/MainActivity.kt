@@ -2,9 +2,7 @@ package com.choi.coffee_kiosks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.choi.coffee_kiosks.databinding.ActivityMainBinding
-import com.choi.coffee_kiosks.view.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,13 +10,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater).also {
             setContentView(it.root)
         }
-        // 홈 화면 등록 (Fragment로)
-        supportFragmentManager.beginTransaction()
-            .add(R.id.fragmentContainer,HomeFragment())
-            .commit()
     }
 }
