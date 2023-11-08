@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Coffee_Kiosks</string>
+
+    <string name="home_title_text">키오스크 연습용 앱</string>
+
+    <!-- homeFragment text -->
+    <string name="kiosk_practice_text">키오스크 \n\t\t\t체험</string>
+    <string name="find_kiosk_text">키오스크\n위치 확인</string>
+    <string name="check_mission_text">미션 확인</string>
+    <string name="check_reward_text">리워드 확인</string>
+
+    <!-- KioskMainFragment text -->
+    <string name="inStore_text">매장 식사</string>
+    <string name="takeOut_text">포장 하기</string>
 </resources>
