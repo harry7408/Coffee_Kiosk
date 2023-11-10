@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/facilityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_24"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_4"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_4"
+        android:textSize="@dimen/text_size_30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="금천구청" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/addressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintBaseline_toBaselineOf="@id/facilityTextView"
+        app:layout_constraintStart_toEndOf="@id/facilityTextView"
+        tools:text="서울 특별시 금천구 시흥대로51길 93-32" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/placeTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_4"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_4"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="@id/facilityTextView"
+        app:layout_constraintTop_toBottomOf="@id/facilityTextView"
+        android:text="@string/place_title_text" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/installedPlaceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_4"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_4"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintBottom_toBottomOf="@+id/placeTitleTextView"
+        app:layout_constraintStart_toEndOf="@+id/placeTitleTextView"
+        app:layout_constraintTop_toTopOf="@+id/placeTitleTextView"
+        tools:text="청사 1층 로비" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/departmentTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_4"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_4"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="@id/placeTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/placeTitleTextView"
+        android:text="@string/department_title_text" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/departmentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_4"
+        android:paddingEnd="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_4"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintBottom_toBottomOf="@+id/departmentTitleTextView"
+        app:layout_constraintStart_toEndOf="@+id/departmentTitleTextView"
+        app:layout_constraintTop_toTopOf="@+id/departmentTitleTextView"
+        tools:text="행정지원과" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/callImageView"
+        android:layout_width="@dimen/vector_asset_36"
+        android:layout_height="@dimen/vector_asset_36"
+        android:src="@drawable/baseline_call_36"
+        app:layout_constraintBottom_toBottomOf="@+id/departmentTextView"
+        app:layout_constraintStart_toEndOf="@+id/departmentTextView"
+        app:layout_constraintTop_toTopOf="@+id/departmentTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

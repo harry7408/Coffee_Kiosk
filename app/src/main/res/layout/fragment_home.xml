@@ -2,6 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:id="@+id/homeLayout"
+    android:clickable="true"
+    android:focusable="true"
     android:layout_height="match_parent">
 
     <com.google.android.material.textview.MaterialTextView
@@ -25,7 +28,7 @@
         android:layout_marginBottom="@dimen/margin_8"
         android:layout_marginStart="@dimen/margin_12"
         android:layout_marginTop="@dimen/margin_80"
-        app:layout_constraintBottom_toTopOf="@id/CheckDailyMissionCardView"
+        app:layout_constraintBottom_toTopOf="@id/checkMissionCardView"
         app:layout_constraintEnd_toStartOf="@id/kiosksPlaceCheckCardView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -63,7 +66,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/CheckDailyMissionCardView"
+        android:id="@+id/checkMissionCardView"
         android:layout_width="@dimen/full_charge"
         android:layout_height="@dimen/full_charge"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/margin_12"
         android:layout_marginBottom="@dimen/margin_80"
-        app:layout_constraintStart_toEndOf="@id/CheckDailyMissionCardView"
+        app:layout_constraintStart_toEndOf="@id/checkMissionCardView"
         app:layout_constraintTop_toBottomOf="@id/kiosksPlaceCheckCardView">
 
         <com.google.android.material.textview.MaterialTextView

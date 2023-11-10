@@ -12,4 +12,10 @@
     <!-- KioskMainFragment text -->
     <string name="inStore_text">매장 식사</string>
     <string name="takeOut_text">포장 하기</string>
+
+    <!-- Bottom sheet text -->
+    <string name="bottom_sheet_title_text">키오스크 위치</string>
+    <string name="place_title_text">위치 : </string>
+    <string name="department_title_text">부서 : </string>
+
 </resources>
