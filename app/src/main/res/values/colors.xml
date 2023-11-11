@@ -9,6 +9,7 @@
     <color name="primary_text_color">#212121</color>
     <color name="secondary_text_color">#757575</color>
     <color name="divider_color">#BDBDBD</color>
+    <color name="theme_color">#FFFFFF</color>
 
 
 </resources>

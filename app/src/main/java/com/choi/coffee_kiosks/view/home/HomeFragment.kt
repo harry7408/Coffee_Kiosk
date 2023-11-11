@@ -6,6 +6,7 @@ import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentHomeBinding
 import com.choi.coffee_kiosks.view.mission.MissionFragment
 import com.choi.coffee_kiosks.view.place.KioskPlaceInfoFragment
+import com.choi.coffee_kiosks.view.practice.main.KioskMainFragment
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
@@ -16,6 +17,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
+            kiosksPracticeCardView.onAvoidDuplicateClick {
+                parentFragmentManager.beginTransaction()
+                    .add(binding.homeLayout.id, KioskMainFragment())
+                    .addToBackStack(null)
+                    .commitAllowingStateLoss()
+            }
+
+
             kiosksPlaceCheckCardView.onAvoidDuplicateClick {
                 parentFragmentManager.beginTransaction()
                     .add(binding.homeLayout.id, KioskPlaceInfoFragment())

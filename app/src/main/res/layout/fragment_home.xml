@@ -5,6 +5,7 @@
     android:id="@+id/homeLayout"
     android:clickable="true"
     android:focusable="true"
+    android:background="@color/theme_color"
     android:layout_height="match_parent">
 
     <com.google.android.material.textview.MaterialTextView

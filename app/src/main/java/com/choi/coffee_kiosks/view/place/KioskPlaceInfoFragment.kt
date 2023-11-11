@@ -67,7 +67,7 @@ class KioskPlaceInfoFragment :
                     response: Response<com.choi.coffee_kiosks.model.Response>
                 ) {
                     if (response.isSuccessful) {
-
+                        Log.e("aaaa",response.body().toString())
                     } else {
                         requireContext().showToastMessage("에러")
                     }
