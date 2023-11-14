@@ -12,21 +12,24 @@
     <dimen name="margin_24">24dp</dimen>
     <dimen name="margin_12">12dp</dimen>
     <dimen name="margin_80">80dp</dimen>
+    <dimen name="margin_56">56dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
     <dimen name="margin_32">32dp</dimen>
     <dimen name="margin_8">8dp</dimen>
     <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
 
     <dimen name="stroke_2">2dp</dimen>
     <dimen name="stroke_5">5dp</dimen>
     <dimen name="radius_16">16dp</dimen>
     <dimen name="radius_20">20dp</dimen>
+    <dimen name="radius_8">8dp</dimen>
 
     <dimen name="peak_200">200dp</dimen>
     <dimen name="offset_100">100dp</dimen>
 
     <dimen name="vector_asset_24">24dp</dimen>
     <dimen name="vector_asset_36">36dp</dimen>
-
 
     // Dimens (sp)
     <dimen name="text_size_30">30sp</dimen>

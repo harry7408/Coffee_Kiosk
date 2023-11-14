@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="kiosk_main_button_style">
         <item name="android:layout_marginStart">@dimen/margin_24</item>
         <item name="android:layout_marginEnd">@dimen/margin_24</item>
         <item name="android:layout_marginTop">@dimen/margin_12</item>
         <item name="android:layout_marginBottom">@dimen/margin_12</item>
+    </style>
 
+    <style name="category_text_style">
+        <item name="android:textSize">@dimen/text_size_24</item>
+        <item name="android:layout_width">@dimen/full_charge</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/margin_8</item>
+        <item name="android:paddingEnd">@dimen/margin_8</item>
+        <item name="android:paddingTop">@dimen/margin_4</item>
+        <item name="android:paddingBottom">@dimen/margin_4</item>
 
+    </style>
+
+    <style name="option_divider_style">
+        <item name="android:layout_marginStart">@dimen/margin_24</item>
+        <item name="android:layout_marginEnd">@dimen/margin_24</item>
+        <item name="android:layout_width">@dimen/full_charge</item>
+        <item name="android:layout_height">@dimen/stroke_2</item>
+        <item name="android:background">@color/divider_color</item>
 
     </style>
 

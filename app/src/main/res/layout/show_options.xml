@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/menuImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/margin_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/americano_hot"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_30"
+        android:text="아메리카노"
+        android:layout_marginStart="@dimen/margin_4"
+        app:layout_constraintStart_toEndOf="@id/menuImageView"
+        app:layout_constraintTop_toTopOf="@id/menuImageView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/minusImageView"
+        android:layout_width="@dimen/vector_asset_36"
+        android:layout_height="@dimen/vector_asset_36"
+        android:layout_marginStart="@dimen/margin_4"
+        app:layout_constraintStart_toEndOf="@id/menuImageView"
+        app:layout_constraintTop_toBottomOf="@id/menuTextView"
+        android:layout_marginTop="@dimen/margin_24"
+        android:src="@drawable/square_minus"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/countTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/minusImageView"
+        app:layout_constraintTop_toTopOf="@id/minusImageView"
+        app:layout_constraintBottom_toBottomOf="@id/minusImageView"
+        android:layout_marginStart="@dimen/margin_8"
+        android:textSize="@dimen/text_size_30"
+        android:text="1"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/plusImageView"
+        android:layout_width="@dimen/vector_asset_36"
+        android:layout_height="@dimen/vector_asset_36"
+        app:layout_constraintStart_toEndOf="@id/countTextView"
+        app:layout_constraintTop_toTopOf="@id/minusImageView"
+        android:layout_marginStart="@dimen/margin_8"
+        android:src="@drawable/square_plus"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/amountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="4500원"
+        android:ellipsize="end"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toEndOf="@id/plusImageView"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintTop_toTopOf="@id/minusImageView"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/hotButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:text="@string/hot_text"
+        android:textSize="@dimen/text_size_24"
+        android:layout_marginTop="@dimen/margin_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/coldButton"
+        app:layout_constraintTop_toBottomOf="@id/menuImageView"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/coldButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:layout_marginStart="@dimen/margin_8"
+        android:text="@string/ice_text"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toEndOf="@id/hotButton"
+        app:layout_constraintTop_toTopOf="@id/hotButton"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/payOptionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="유료옵션"
+        android:textSize="24sp"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hotButton"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/addPayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/margin_32"
+        android:text="추가"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintTop_toTopOf="@id/payOptionsTextView"/>
+
+    <View
+        android:id="@+id/line1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_8"
+        style="@style/option_divider_style"
+        app:layout_constraintTop_toBottomOf="@id/payOptionsTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/freeOptionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="무료옵션"
+        android:textSize="24sp"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/payOptionsTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/addFreeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/margin_32"
+        android:text="추가"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintTop_toTopOf="@id/freeOptionsTextView"/>
+
+    <View
+        android:id="@+id/line2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_8"
+        style="@style/option_divider_style"
+        app:layout_constraintTop_toBottomOf="@id/freeOptionsTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelButton"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32"
+        android:layout_marginBottom="@dimen/margin_56"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:text="@string/cancel_text"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/okButton"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/okButton"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cancelButton"
+        android:layout_marginStart="@dimen/margin_8"
+        android:text="@string/ok_text"
+        android:textSize="@dimen/text_size_24"
+        android:layout_marginEnd="@dimen/margin_32"
+        app:layout_constraintStart_toEndOf="@id/cancelButton"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
