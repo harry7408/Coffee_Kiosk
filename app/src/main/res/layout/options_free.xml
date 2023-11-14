@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_48"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingEnd="@dimen/margin_16"
+        android:paddingBottom="@dimen/margin_8"
+        android:text="아메리카노(ICE)"
+        android:textSize="@dimen/text_size_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/margin_24"
+        android:background="@color/main_color"
+        app:layout_constraintEnd_toStartOf="@id/sugarTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sugarTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sugarTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_32"
+        android:text="@string/sugar_text"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toEndOf="@id/line1"
+        app:layout_constraintTop_toBottomOf="@id/menuTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pumpOneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="@string/one_pump_text"
+        app:layout_constraintStart_toStartOf="@id/line1"
+        app:layout_constraintTop_toBottomOf="@id/sugarTextView" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/spoonTwoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:text="@string/two_pump_text"
+        app:layout_constraintStart_toEndOf="@id/pumpOneButton"
+        app:layout_constraintTop_toTopOf="@id/pumpOneButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/spoonThreeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:text="@string/three_pump_text"
+        app:layout_constraintStart_toEndOf="@id/spoonTwoButton"
+        app:layout_constraintTop_toTopOf="@id/pumpOneButton" />
+
+    <View
+        android:id="@+id/divider1"
+        style="@style/option_divider_style"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pumpOneButton" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@color/main_color"
+        app:layout_constraintEnd_toStartOf="@id/sugarTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/iceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/Ice_text"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toEndOf="@id/line2"
+        app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/manyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="@string/many_text"
+        app:layout_constraintStart_toStartOf="@id/line2"
+        app:layout_constraintTop_toBottomOf="@id/iceTextView" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:text="@string/little_text"
+        app:layout_constraintStart_toEndOf="@id/manyButton"
+        app:layout_constraintTop_toTopOf="@id/manyButton" />
+
+    <View
+        android:id="@+id/divider2"
+        style="@style/option_divider_style"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/manyButton" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@color/main_color"
+        app:layout_constraintEnd_toStartOf="@id/sugarTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/densityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="농도"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toEndOf="@id/line3"
+        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/weakButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="@string/low_dense_text"
+        app:layout_constraintStart_toStartOf="@id/line3"
+        app:layout_constraintTop_toBottomOf="@id/densityTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelButton"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_56"
+        android:text="@string/cancel_text"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/okButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/okButton"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_32"
+        android:text="@string/ok_text"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintBottom_toBottomOf="@id/cancelButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancelButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

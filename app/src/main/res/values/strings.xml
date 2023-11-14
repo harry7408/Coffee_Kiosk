@@ -12,10 +12,37 @@
     <!-- KioskMainFragment text -->
     <string name="inStore_text">매장 식사</string>
     <string name="takeOut_text">포장 하기</string>
+    <string name="fab_description">이전 화면</string>
 
     <!-- Bottom sheet text -->
     <string name="bottom_sheet_title_text">키오스크 위치</string>
     <string name="place_title_text">위치 : </string>
     <string name="department_title_text">부서 : </string>
+
+    <!-- type text -->
+    <string name="coffee_text">커피</string>
+    <string name="tea_text">티</string>
+    <string name="ade_text">에이드</string>
+    <string name="juice_text">주스</string>
+    <string name="none_coffee_text">논커피</string>
+    <string name="dessert_text">디저트</string>
+
+    <!-- Options show text -->
+    <string name="ok_text">선택 완료</string>
+    <string name="cancel_text">취소</string>
+    <string name="hot_text">Hot</string>
+    <string name="ice_text">Ice</string>
+    <string name="ice_only_text">Iced Only</string>
+
+    <!-- Free Options text -->
+    <string name="sugar_text">설탕시럽</string>
+    <string name="Ice_text">얼음</string>
+    <string name="density_text">농도</string>
+    <string name="one_pump_text">1펌프</string>
+    <string name="two_pump_text">2펌프</string>
+    <string name="three_pump_text">3펌프</string>
+    <string name="little_text">적게</string>
+    <string name="many_text">많이</string>
+    <string name="low_dense_text">연하게</string>
 
 </resources>

@@ -19,7 +19,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         with(binding) {
             kiosksPracticeCardView.onAvoidDuplicateClick {
                 parentFragmentManager.beginTransaction()
-                    .add(binding.homeLayout.id, KioskMainFragment())
+                    .add(binding.homeLayout.id, KioskMainFragment.newInstance())
                     .addToBackStack(null)
                     .commitAllowingStateLoss()
             }
@@ -38,7 +38,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                     .addToBackStack(null)
                     .commitAllowingStateLoss()
             }
-
         }
     }
 

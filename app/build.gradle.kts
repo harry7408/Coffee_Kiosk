@@ -79,6 +79,18 @@ dependencies {
     implementation ("com.google.dagger:hilt-android:2.48.1")
     kapt ("com.google.dagger:hilt-compiler:2.48.1")
 
+    // FlowBinding
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-android:1.2.0")
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-material:1.2.0")
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-activity:1.2.0")
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-appcompat:1.2.0")
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-core:1.2.0")
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-lifecycle:1.2.0")
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-navigation:1.2.0")
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-preference:1.2.0")
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-recyclerview:1.2.0")
+    implementation("io.github.reactivecircus.flowbinding:flowbinding-viewpager2:1.2.0")
+
 }
 //hilt debugging
 kapt {

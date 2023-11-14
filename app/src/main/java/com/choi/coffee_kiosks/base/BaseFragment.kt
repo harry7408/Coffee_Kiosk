@@ -41,6 +41,11 @@ abstract class BaseFragment<VB : ViewBinding>(
         compositeDisposable.dispose()
     }
 
+    /**
+     * On avoid duplicate click
+     * with Rx Binding
+     * @param doOnMainThread : 작업할 내용
+     */
     fun View.onAvoidDuplicateClick(doOnMainThread: () -> Unit) {
         compositeDisposable.add(
             this.clicks().observeOn(
