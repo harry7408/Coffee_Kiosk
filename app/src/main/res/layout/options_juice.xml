@@ -1,6 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_48"
+        android:text="복숭아 주스"
+        android:textSize="@dimen/text_size_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/espressoOptionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_32"
+        android:text="@string/espressoOptions_text"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/espressoPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price_500"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintBottom_toBottomOf="@id/espressoOptionsTextView"
+        app:layout_constraintEnd_toStartOf="@+id/hazelnutMinusImageView"
+        app:layout_constraintStart_toEndOf="@id/espressoOptionsTextView"
+        app:layout_constraintTop_toTopOf="@id/espressoOptionsTextView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/hazelnutMinusImageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:src="@drawable/square_minus"
+        app:layout_constraintBottom_toBottomOf="@id/espressoOptionsTextView"
+        app:layout_constraintEnd_toStartOf="@id/espressoCountTextView"
+        app:layout_constraintTop_toTopOf="@id/espressoOptionsTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/espressoCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:text="@string/init_count_text"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintBottom_toBottomOf="@id/espressoOptionsTextView"
+        app:layout_constraintEnd_toStartOf="@id/espressoPlusImageView"
+        app:layout_constraintTop_toTopOf="@id/espressoOptionsTextView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/espressoPlusImageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="@dimen/margin_32"
+        android:src="@drawable/square_plus"
+        app:layout_constraintBottom_toBottomOf="@id/espressoOptionsTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/espressoOptionsTextView" />
+
+    <View
+        android:id="@+id/divider1"
+        style="@style/option_divider_style"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/espressoOptionsTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/perlOptionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/perlOptions_text"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/perlPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price_700"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintBottom_toBottomOf="@id/perlOptionsTextView"
+        app:layout_constraintEnd_toEndOf="@+id/espressoPriceTextView"
+        app:layout_constraintStart_toStartOf="@+id/espressoPriceTextView"
+        app:layout_constraintTop_toTopOf="@id/perlOptionsTextView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/perlMinusImageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:src="@drawable/square_minus"
+        app:layout_constraintBottom_toBottomOf="@id/perlOptionsTextView"
+        app:layout_constraintEnd_toStartOf="@id/perlCountTextView"
+        app:layout_constraintTop_toTopOf="@id/perlOptionsTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/perlCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:text="@string/init_count_text"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintBottom_toBottomOf="@id/perlOptionsTextView"
+        app:layout_constraintEnd_toStartOf="@id/perlPlusImageView"
+        app:layout_constraintTop_toTopOf="@id/perlOptionsTextView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/perlPlusImageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="@dimen/margin_32"
+        android:src="@drawable/square_plus"
+        app:layout_constraintBottom_toBottomOf="@id/perlOptionsTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/perlOptionsTextView" />
+
+    <View
+        android:id="@+id/divider2"
+        style="@style/option_divider_style"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/perlOptionsTextView" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

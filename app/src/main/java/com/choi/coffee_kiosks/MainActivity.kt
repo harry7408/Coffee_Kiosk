@@ -12,10 +12,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Splash 이미지 넣기
         installSplashScreen()
+
         binding = ActivityMainBinding.inflate(layoutInflater).also {
             setContentView(it.root)
         }
+
        if (savedInstanceState==null) {
            // 홈 화면 등록 (Fragment로)
            supportFragmentManager.beginTransaction()

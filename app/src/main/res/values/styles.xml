@@ -26,7 +26,15 @@
         <item name="android:layout_width">@dimen/full_charge</item>
         <item name="android:layout_height">@dimen/stroke_2</item>
         <item name="android:background">@color/divider_color</item>
+    </style>
 
+    <style name="join_number_style">
+        <item name="android:layout_width">@dimen/full_charge</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_30</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/background_button_stroke_black</item>
     </style>
 
 </resources>

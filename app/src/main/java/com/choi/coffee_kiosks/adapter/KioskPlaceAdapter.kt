@@ -41,7 +41,6 @@ class KioskPlaceAdapter(
                 departmentTextView.text = place.department
             }
 
-
         }
     }
 }

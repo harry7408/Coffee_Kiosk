@@ -29,9 +29,14 @@ private fun <T> Flow<T>.throttleFirst(interval: Long): Flow<T> = flow {
     }
 }
 
-fun ViewGroup.addFragment(current: Fragment, new: Fragment) {
-    current.childFragmentManager.beginTransaction()
+fun ViewGroup.changeFragment(current: Fragment, new: Fragment) {
+    current.parentFragmentManager.beginTransaction()
         .add(this.id, new)
         .addToBackStack(null)
+        .commit()
+}
+fun ViewGroup.changeMenu(current: Fragment, new: Fragment) {
+    current.parentFragmentManager.beginTransaction()
+        .replace(this.id, new)
         .commit()
 }

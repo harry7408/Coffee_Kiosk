@@ -11,5 +11,6 @@
     <color name="divider_color">#BDBDBD</color>
     <color name="theme_color">#FFFFFF</color>
 
+    <color name="color_red">#FF0000</color>
 
 </resources>

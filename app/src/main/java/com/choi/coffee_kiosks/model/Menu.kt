@@ -2,7 +2,7 @@ package com.choi.coffee_kiosks.model
 
 data class Menu (
     val name : String,
-    val price : String,
+    val price : Long,
     val type : Type,
     val image : Int,
 )
