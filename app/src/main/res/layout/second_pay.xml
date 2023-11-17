@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/stepTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginTop="@dimen/text_size_24"
+        android:text="@string/step2_text"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/text_size_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/requireTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:text="@string/choose_pay_method_text"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintStart_toStartOf="@id/stepTextView"
+        app:layout_constraintTop_toBottomOf="@id/stepTextView" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/payCardCardView"
+        android:layout_width="@dimen/cardView_size"
+        android:layout_height="@dimen/cardView_size"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintStart_toStartOf="@id/stepTextView"
+        app:layout_constraintTop_toBottomOf="@id/requireTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/payCardImageView"
+                android:layout_width="@dimen/full_charge"
+                android:layout_height="@dimen/full_charge"
+                android:layout_marginTop="@dimen/margin_4"
+                android:scaleType="fitCenter"
+                android:src="@drawable/card"
+                app:layout_constraintBottom_toTopOf="@id/payCardTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payCardTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/pay_card_text"
+                android:textSize="@dimen/text_size_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payCardImageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/payCouponCardView"
+        android:layout_width="@dimen/cardView_size"
+        android:layout_height="@dimen/cardView_size"
+        android:layout_marginStart="@dimen/margin_8"
+        app:layout_constraintStart_toEndOf="@id/payCardCardView"
+        app:layout_constraintTop_toTopOf="@id/payCardCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/payCouponImageView"
+                android:layout_width="@dimen/full_charge"
+                android:layout_height="@dimen/full_charge"
+                android:layout_marginTop="@dimen/margin_4"
+                android:scaleType="fitCenter"
+                android:src="@drawable/coupon"
+                app:layout_constraintBottom_toTopOf="@id/payCouponTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payCouponTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/pay_coupon_text"
+                android:textSize="@dimen/text_size_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payCouponImageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/payStampCardView"
+        android:layout_width="@dimen/cardView_size"
+        android:layout_height="@dimen/cardView_size"
+        android:layout_marginStart="@dimen/margin_8"
+        app:layout_constraintStart_toEndOf="@id/payCouponCardView"
+        app:layout_constraintTop_toTopOf="@id/payCardCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/payStampImageView"
+                android:layout_width="@dimen/full_charge"
+                android:layout_height="@dimen/full_charge"
+                android:layout_marginTop="@dimen/margin_4"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stamp"
+                app:layout_constraintBottom_toTopOf="@id/payStampTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payStampTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/pay_stamp_text"
+                android:textSize="@dimen/text_size_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payStampImageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/payCoCardView"
+        android:layout_width="@dimen/cardView_size"
+        android:layout_height="@dimen/cardView_size"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintStart_toStartOf="@id/stepTextView"
+        app:layout_constraintTop_toBottomOf="@id/payCardCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/payCoImageView"
+                android:layout_width="@dimen/full_charge"
+                android:layout_height="@dimen/full_charge"
+                android:scaleType="fitCenter"
+                android:src="@drawable/payco"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/kaKaoPayCardView"
+        android:layout_width="@dimen/cardView_size"
+        android:layout_height="@dimen/cardView_size"
+        android:layout_marginStart="@dimen/margin_8"
+        app:layout_constraintStart_toEndOf="@id/payCoCardView"
+        app:layout_constraintTop_toTopOf="@id/payCoCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/kaKaoPayImageView"
+                android:layout_width="@dimen/full_charge"
+                android:layout_height="@dimen/full_charge"
+                android:scaleType="fitCenter"
+                android:src="@drawable/kakaopay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/naverPayCardView"
+        android:layout_width="@dimen/cardView_size"
+        android:layout_height="@dimen/cardView_size"
+        android:layout_marginStart="@dimen/margin_8"
+        app:layout_constraintStart_toEndOf="@id/kaKaoPayCardView"
+        app:layout_constraintTop_toTopOf="@id/payCoCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/naverPayImageView"
+                android:layout_width="@dimen/full_charge"
+                android:layout_height="@dimen/full_charge"
+                android:scaleType="fitCenter"
+                android:src="@drawable/naverpay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/stroke_5"
+        android:layerType="software"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuideLine"
+        app:layout_constraintEnd_toEndOf="@id/payStampCardView"
+        app:layout_constraintStart_toStartOf="@id/stepTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/orderAmountGuideTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="@string/order_amount_text"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stepTextView"
+        app:layout_constraintTop_toBottomOf="@id/bottomGuideLine" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/orderAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1500원"
+        android:textColor="@color/color_red"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintEnd_toEndOf="@id/divider"
+        app:layout_constraintTop_toTopOf="@id/orderAmountGuideTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/discountAmountGuideTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="@string/discount_amount_text"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stepTextView"
+        app:layout_constraintTop_toBottomOf="@id/orderAmountGuideTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/discountAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0원"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintEnd_toEndOf="@id/divider"
+        app:layout_constraintTop_toTopOf="@id/discountAmountGuideTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/payAmountGuideTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="@string/pay_amount_text"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stepTextView"
+        app:layout_constraintTop_toBottomOf="@id/discountAmountGuideTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/payAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0원"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintEnd_toEndOf="@id/divider"
+        app:layout_constraintTop_toTopOf="@id/payAmountGuideTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_12"
+        android:text="@string/call_cancel_text"
+        app:layout_constraintStart_toStartOf="@id/stepTextView"
+        app:layout_constraintTop_toBottomOf="@id/payAmountGuideTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_12"
+        android:text="@string/back_text"
+        app:layout_constraintStart_toEndOf="@id/allCancelButton"
+        app:layout_constraintTop_toTopOf="@id/allCancelButton" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

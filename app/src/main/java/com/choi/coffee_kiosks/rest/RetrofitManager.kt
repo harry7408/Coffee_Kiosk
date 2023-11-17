@@ -9,6 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
+// Retrofit 에서 데이터 가져오는 부분은 MVVM 구조로 변경하기
 object RetrofitManager {
 
     private val gson = GsonBuilder().setLenient().create()
@@ -36,3 +37,5 @@ object RetrofitManager {
     val kioskPositionService: KioskPositionService =
         retrofit.create(KioskPositionService::class.java)
 }
+
+// 흐름 따라 누적해서 같은지 비교하도록 (Text로)

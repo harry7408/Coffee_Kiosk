@@ -6,4 +6,6 @@
     <color name="text_icon_color">#FFFFFF</color>
     <color name="divider_color">#BDBDBD</color>
     <color name="theme_color">#000000</color>
+
+    <color name="color_red">#FF0000</color>
 </resources>

@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-kapt")
+    id("com.google.gms.google-services")
     id ("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
     id ("dagger.hilt.android.plugin")
 }
@@ -91,6 +92,9 @@ dependencies {
     implementation("io.github.reactivecircus.flowbinding:flowbinding-recyclerview:1.2.0")
     implementation("io.github.reactivecircus.flowbinding:flowbinding-viewpager2:1.2.0")
 
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }
 //hilt debugging
 kapt {

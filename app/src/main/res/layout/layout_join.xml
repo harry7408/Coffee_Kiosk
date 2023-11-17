@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userSearchJoinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:text="@string/search_join_text"
+        android:textSize="@dimen/text_size_30"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/requireTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="@string/telephone_input_text"
+        android:textColor="@color/divider_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userSearchJoinTextView" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/firstPhoneNumEditText"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_16"
+        android:maxLength="3"
+        app:layout_constraintEnd_toStartOf="@id/secondPhoneNumEditText"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/requireTextView" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/secondPhoneNumEditText"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:maxLength="4"
+        app:layout_constraintEnd_toStartOf="@id/thirdPhoneNumEditText"
+        app:layout_constraintStart_toEndOf="@id/firstPhoneNumEditText"
+        app:layout_constraintTop_toTopOf="@id/firstPhoneNumEditText" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/thirdPhoneNumEditText"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_32"
+        android:maxLength="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/secondPhoneNumEditText"
+        app:layout_constraintTop_toTopOf="@id/firstPhoneNumEditText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberOneTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/one_text"
+        app:layout_constraintEnd_toStartOf="@id/numberTwoTextView"
+        app:layout_constraintStart_toStartOf="@id/firstPhoneNumEditText"
+        app:layout_constraintTop_toBottomOf="@id/firstPhoneNumEditText"
+        app:layout_constraintBottom_toTopOf="@id/numberFourTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberTwoTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/two_text"
+        app:layout_constraintEnd_toStartOf="@id/numberThreeTextView"
+        app:layout_constraintStart_toEndOf="@id/numberOneTextView"
+        app:layout_constraintTop_toTopOf="@id/numberOneTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberOneTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberThreeTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:text="@string/three_text"
+        app:layout_constraintEnd_toEndOf="@+id/thirdPhoneNumEditText"
+        app:layout_constraintStart_toEndOf="@id/numberTwoTextView"
+        app:layout_constraintTop_toTopOf="@id/numberOneTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberOneTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberFourTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/four_text"
+        app:layout_constraintEnd_toStartOf="@id/numberFiveTextView"
+        app:layout_constraintStart_toStartOf="@id/firstPhoneNumEditText"
+        app:layout_constraintTop_toBottomOf="@id/numberOneTextView"
+        app:layout_constraintBottom_toTopOf="@id/numberSevenTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberFiveTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/five_text"
+        app:layout_constraintEnd_toStartOf="@id/numberSixTextView"
+        app:layout_constraintStart_toEndOf="@id/numberFourTextView"
+        app:layout_constraintTop_toTopOf="@id/numberFourTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberFourTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberSixTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:text="@string/six_text"
+        app:layout_constraintEnd_toEndOf="@+id/thirdPhoneNumEditText"
+        app:layout_constraintStart_toEndOf="@id/numberFiveTextView"
+        app:layout_constraintTop_toTopOf="@id/numberFourTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberFourTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberSevenTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/seven_text"
+        app:layout_constraintEnd_toStartOf="@id/numberEightTextView"
+        app:layout_constraintStart_toStartOf="@id/firstPhoneNumEditText"
+        app:layout_constraintTop_toBottomOf="@id/numberFourTextView"
+        app:layout_constraintBottom_toTopOf="@id/deleteAllTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberEightTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/eight_text"
+        app:layout_constraintEnd_toStartOf="@id/numberNineTextView"
+        app:layout_constraintStart_toEndOf="@id/numberSevenTextView"
+        app:layout_constraintTop_toTopOf="@id/numberSevenTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberSevenTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberNineTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:text="@string/nine_text"
+        app:layout_constraintEnd_toEndOf="@+id/thirdPhoneNumEditText"
+        app:layout_constraintStart_toEndOf="@id/numberEightTextView"
+        app:layout_constraintTop_toTopOf="@id/numberSevenTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberSevenTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/deleteAllTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:textSize="@dimen/text_size_30"
+        android:text="@string/delete_text"
+        android:layout_marginBottom="@dimen/margin_16"
+        app:layout_constraintEnd_toStartOf="@id/numberZeroTextView"
+        app:layout_constraintStart_toStartOf="@id/firstPhoneNumEditText"
+        app:layout_constraintTop_toBottomOf="@id/numberSevenTextView"
+        app:layout_constraintBottom_toBottomOf="@id/bottomGuideLine"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberZeroTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/zero_text"
+        app:layout_constraintEnd_toStartOf="@id/backSpaceTextView"
+        app:layout_constraintStart_toEndOf="@id/deleteAllTextView"
+        app:layout_constraintTop_toTopOf="@id/deleteAllTextView"
+        app:layout_constraintBottom_toBottomOf="@id/deleteAllTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/backSpaceTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:text="@string/backspace_text"
+        app:layout_constraintBottom_toBottomOf="@id/deleteAllTextView"
+        app:layout_constraintEnd_toEndOf="@+id/thirdPhoneNumEditText"
+        app:layout_constraintStart_toEndOf="@id/numberZeroTextView"
+        app:layout_constraintTop_toTopOf="@id/deleteAllTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.8"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/halfVerticalGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelButton"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/halfVerticalGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/cancel_text"
+        android:textSize="@dimen/text_size_24"
+        android:layout_marginStart="@dimen/margin_32"
+        android:layout_marginEnd="@dimen/margin_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_24"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextButton"
+        android:layout_width="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_32"
+        android:layout_marginEnd="@dimen/margin_32"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/halfVerticalGuideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/text_size_24"
+        android:text="@string/next_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_24"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

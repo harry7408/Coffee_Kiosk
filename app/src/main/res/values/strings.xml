@@ -45,4 +45,57 @@
     <string name="many_text">많이</string>
     <string name="low_dense_text">연하게</string>
 
+    <!-- Options List & Price text -->
+    <string name="hazelnutOptions_text">헤이즐넛 시럽 추가</string>
+    <string name="perlOptions_text">펄 추가</string>
+    <string name="vanillaOptions_text">바닐라 시럽 추가</string>
+    <string name="espressoOptions_text">에스프레소 샷 추가</string>
+    <string name="creamOptions_text">휘핑 크림 추가</string>
+    <string name="price_500">500원</string>
+    <string name="price_700">700원</string>
+    <string name="price_900">900원</string>
+    <string name="init_count_text">1</string>
+
+    <!-- Pay Step 1 text -->
+    <string name="step1_text">Step 1.</string>
+    <string name="ask_accumulate_text">적립하시겠습니까?</string>
+    <string name="message_text">회원이 아니면 [회원가입]을\n적립을 원하지 않으시면 결제를 진행해주세요.</string>
+    <string name="check_phone_text">번호조회</string>
+    <string name="check_barcode_text">바코드조회</string>
+    <string name="add_user_text">회원가입</string>
+    <string name="user_name_guide_text">회원명</string>
+    <string name="phone_number_guide_text">전화번호</string>
+    <string name="stamp_guide_text">스탬프 개수</string>
+    <string name="next_text">다음</string>
+
+
+    <!-- join page text -->
+    <string name="search_join_text">회원 조회/가입</string>
+    <string name="telephone_input_text">핸드폰 번호를 눌러주세요.</string>
+    <string name="one_text">1</string>
+    <string name="two_text">2</string>
+    <string name="three_text">3</string>
+    <string name="four_text">4</string>
+    <string name="five_text">5</string>
+    <string name="six_text">6</string>
+    <string name="seven_text">7</string>
+    <string name="eight_text">8</string>
+    <string name="nine_text">9</string>
+    <string name="zero_text">0</string>
+    <string name="delete_text">삭제</string>
+    <string name="backspace_text">←</string>
+
+    <!-- Pay Step 2 text -->
+    <string name="step2_text">Step 2.</string>
+    <string name="choose_pay_method_text">결제방식을 선택해 주세요!</string>
+    <string name="pay_card_text">카드결제</string>
+    <string name="pay_coupon_text">쿠폰결제</string>
+    <string name="pay_stamp_text">스탬프결제</string>
+    <string name="order_amount_text">주문 금액</string>
+    <string name="discount_amount_text">할인 금액</string>
+    <string name="pay_amount_text">결제 금액</string>
+    <string name="call_cancel_text">전체취소</string>
+    <string name="back_text">이전</string>
+
+
 </resources>
