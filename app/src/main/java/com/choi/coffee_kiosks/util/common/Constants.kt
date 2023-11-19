@@ -28,12 +28,12 @@ val places = hashMapOf(
 )
 
 val coffees = listOf<Menu>(
-    Menu("아메리카노", 1500L, Type.COFFEE, R.drawable.americano_ice),
-    Menu("카페라떼", 2900L, Type.COFFEE, R.drawable.caffelatte_ice),
-    Menu("바닐라라떼", 3300L, Type.COFFEE, R.drawable.vanilla_latte_ice),
-    Menu("헤이즐넛라떼", 3300L, Type.COFFEE, R.drawable.hazelnuts_latte_ice),
-    Menu("더치커피", 3300L, Type.COFFEE, R.drawable.dutch_ice),
-    Menu("아인슈페너", 4200L, Type.COFFEE, R.drawable.einspenner_ice),
+    Menu("아메리카노", 1500L, Type.COFFEE, R.drawable.americano),
+    Menu("카페라떼", 2900L, Type.COFFEE, R.drawable.caffelatte),
+    Menu("바닐라라떼", 3300L, Type.COFFEE, R.drawable.vanilla_latte),
+    Menu("헤이즐넛라떼", 3300L, Type.COFFEE, R.drawable.hazelnuts_latte),
+    Menu("더치커피", 3300L, Type.COFFEE, R.drawable.dutch),
+    Menu("더치라떼", 3800L, Type.COFFEE, R.drawable.dutch_latte),
 )
 
 val juices = listOf<Menu>(
@@ -44,11 +44,11 @@ val juices = listOf<Menu>(
 )
 
 val teas = listOf<Menu>(
-    Menu("페퍼민트", 2500L, Type.TEA, R.drawable.pepper_mint_ice),
-    Menu("캐모마일", 2500L, Type.TEA, R.drawable.chamomile_ice),
-    Menu("로즈마리", 2500L, Type.TEA, R.drawable.rosemary_ice),
-    Menu("홍차", 2500L, Type.TEA, R.drawable.earl_gery_cold),
-    Menu("복숭아티", 3000L, Type.TEA, R.drawable.peach_tea_ice),
+    Menu("페퍼민트", 2500L, Type.TEA, R.drawable.pepper_mint),
+    Menu("캐모마일", 2500L, Type.TEA, R.drawable.chamomile),
+    Menu("로즈마리", 2500L, Type.TEA, R.drawable.rosemary),
+    Menu("홍차", 2500L, Type.TEA, R.drawable.earl_gery),
+    Menu("복숭아티", 3000L, Type.TEA, R.drawable.peach_tea),
 )
 
 val ades = listOf<Menu>(
@@ -59,9 +59,9 @@ val ades = listOf<Menu>(
 )
 
 val nonCoffees = listOf<Menu>(
-    Menu("그린티라떼", 3500L, Type.NON_COFFEE, R.drawable.green_tea_latte_ice),
-    Menu("곡물라떼", 3300L, Type.NON_COFFEE, R.drawable.grain_latte_ice),
-    Menu("고구마라떼", 3500L, Type.NON_COFFEE, R.drawable.sweet_potato_latte_ice),
+    Menu("그린티라떼", 3500L, Type.NON_COFFEE, R.drawable.green_tea_latte),
+    Menu("곡물라떼", 3300L, Type.NON_COFFEE, R.drawable.grain_latte),
+    Menu("고구마라떼", 3500L, Type.NON_COFFEE, R.drawable.sweet_potato_latte),
 )
 
 val desserts = listOf<Menu>(

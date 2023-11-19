@@ -38,4 +38,3 @@ object RetrofitManager {
         retrofit.create(KioskPositionService::class.java)
 }
 
-// 흐름 따라 누적해서 같은지 비교하도록 (Text로)
