@@ -1,10 +1,7 @@
-package com.choi.coffee_kiosks.view.practice.choose
+package com.choi.coffee_kiosks.view.practice.category
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.base.BaseFragment

@@ -1,26 +1,23 @@
-package com.choi.coffee_kiosks.view.practice.choose
+package com.choi.coffee_kiosks.view.practice.category
 
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.choi.coffee_kiosks.adapter.MenuAdapter
 import com.choi.coffee_kiosks.base.BaseFragment
-import com.choi.coffee_kiosks.databinding.FragmentAdeBinding
-import com.choi.coffee_kiosks.util.common.ades
-import com.choi.coffee_kiosks.util.common.coffees
+import com.choi.coffee_kiosks.databinding.FragmentDessertBinding
+import com.choi.coffee_kiosks.util.common.desserts
 
-class AdeFragment : BaseFragment<FragmentAdeBinding>(FragmentAdeBinding::inflate) {
+class DessertFragment: BaseFragment<FragmentDessertBinding>(FragmentDessertBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         with(binding) {
-            adeRecyclerView.apply {
+            dessertRecyclerView.apply {
                 layoutManager= GridLayoutManager(requireContext(),2)
-                adapter= MenuAdapter(ades) {
+                adapter= MenuAdapter(desserts) { name,price,imgId ->
 
                 }
             }
         }
     }
-
-
 }
