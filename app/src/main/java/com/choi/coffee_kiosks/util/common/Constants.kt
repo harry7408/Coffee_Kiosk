@@ -27,6 +27,15 @@ val places = hashMapOf(
     6 to LatLng(37.4511867, 126.9140346),
 )
 
+val telephoneNum = listOf<String>(
+    "02-2627-1005",
+    "02-2627-2355",
+    "02-2627-2356",
+    "02-2627-2355",
+    "02-2627-2255",
+    "02-2627-2255",
+)
+
 val coffees = listOf<Menu>(
     Menu("아메리카노", 1500L, Type.COFFEE, R.drawable.americano),
     Menu("카페라떼", 2900L, Type.COFFEE, R.drawable.caffelatte),
