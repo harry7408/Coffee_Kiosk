@@ -1,17 +1,22 @@
 package com.choi.coffee_kiosks.adapter
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemKioskPlaceBinding
 import com.choi.coffee_kiosks.model.KioskPosition
+import com.choi.coffee_kiosks.util.common.places
+import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
+import com.choi.coffee_kiosks.util.common.telephoneNum
 import com.google.android.gms.maps.model.LatLng
 
 class KioskPlaceAdapter(
-    private val placeList: List<KioskPosition>,
+    var placeList: List<KioskPosition>,
     private val onClick: (LatLng) -> Unit,
-    private val callImageClick: (View) -> Unit,
+    private val callImageClick: (String) -> Unit,
 ) :
     RecyclerView.Adapter<KioskPlaceAdapter.PlaceViewHolder>() {
 
@@ -39,8 +44,15 @@ class KioskPlaceAdapter(
                 addressTextView.text = place.address
                 installedPlaceTextView.text = place.installedPlace
                 departmentTextView.text = place.department
-            }
 
+                root.setOnAvoidDuplicateClickWithFlow {
+                    onClick(places[place.number]!!)
+                }
+
+                callImageView.setOnAvoidDuplicateClickWithFlow {
+                    callImageClick("tel:${telephoneNum[place.number]}")
+                }
+            }
         }
     }
 }
