@@ -13,7 +13,7 @@
         android:paddingTop="@dimen/margin_8"
         android:paddingEnd="@dimen/margin_16"
         android:paddingBottom="@dimen/margin_8"
-        android:text="아메리카노(ICE)"
+        android:text=""
         android:textSize="@dimen/text_size_30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

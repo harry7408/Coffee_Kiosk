@@ -1,21 +1,19 @@
 package com.choi.coffee_kiosks.view.practice.category.dialog
 
 import android.annotation.SuppressLint
-import android.graphics.Color
-import android.graphics.Point
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.databinding.FragmentShowOptionsBinding
+import com.choi.coffee_kiosks.model.Menu
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.util.common.setWindowSize
 
-class ShowOptionsFragment(private val menu: String, var price: Long, val imgId: Int) :
+class ShowOptionsFragment(private val menu : Menu) :
     DialogFragment() {
     private lateinit var binding: FragmentShowOptionsBinding
     private var currentCount = 1
@@ -39,19 +37,20 @@ class ShowOptionsFragment(private val menu: String, var price: Long, val imgId: 
         with(binding) {
             coldButton.apply {
                 setOnAvoidDuplicateClickWithFlow {
-                    menuTextView.text = "$menu(Ice)"
+
+                    menuTextView.text = "${menu.name}(Ice)"
                     setBackgroundResource(R.drawable.background_text_choose)
                 }
             }
 
             hotButton.setOnAvoidDuplicateClickWithFlow {
-                menuTextView.text = "$menu(Hot)"
+                menuTextView.text = "${menu.name}(Hot)"
             }
 
             plusImageView.setOnAvoidDuplicateClickWithFlow {
                 currentCount++
                 countTextView.text = currentCount.toString()
-                amountTextView.text = "${price * currentCount} 원"
+                amountTextView.text = "${menu.price * currentCount} 원"
             }
 
             minusImageView.setOnAvoidDuplicateClickWithFlow {
@@ -60,7 +59,7 @@ class ShowOptionsFragment(private val menu: String, var price: Long, val imgId: 
                     currentCount++
                 }
                 countTextView.text = currentCount.toString()
-                amountTextView.text = "${price * currentCount} 원"
+                amountTextView.text = "${menu.price * currentCount} 원"
             }
 
             okButton.setOnAvoidDuplicateClickWithFlow {
@@ -68,8 +67,14 @@ class ShowOptionsFragment(private val menu: String, var price: Long, val imgId: 
             }
 
             addFreeTextView.setOnAvoidDuplicateClickWithFlow {
-                val dialog = FreeOptionFragment()
-                dialog.show(childFragmentManager, "tttt")
+                val dialog = FreeOptionFragment(binding.menuTextView.text.toString())
+                dialog.isCancelable=true
+                dialog.show(childFragmentManager,null)
+                Log.d("Options",binding.menuTextView.text.toString())
+            }
+
+            addPayTextView.setOnAvoidDuplicateClickWithFlow {
+                val dialog=PayOptionFragment(menu.type)
             }
 
             cancelButton.setOnAvoidDuplicateClickWithFlow {
@@ -80,10 +85,10 @@ class ShowOptionsFragment(private val menu: String, var price: Long, val imgId: 
 
     private fun initView() {
         with(binding) {
-            menuTextView.text = menu
+            menuTextView.text = menu.name
             countTextView.text = currentCount.toString()
-            amountTextView.text = "$price 원"
-            menuImageView.setImageResource(imgId)
+            amountTextView.text = "${menu.price} 원"
+            menuImageView.setImageResource(menu.image)
         }
     }
 

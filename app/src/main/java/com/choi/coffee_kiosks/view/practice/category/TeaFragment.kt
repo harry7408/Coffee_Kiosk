@@ -14,7 +14,7 @@ class TeaFragment : BaseFragment<FragmentTeaBinding>(FragmentTeaBinding::inflate
         with(binding) {
             teaRecyclerView.apply {
                 layoutManager= GridLayoutManager(requireContext(),2)
-                adapter= MenuAdapter(teas) { name,price,imgId ->
+                adapter= MenuAdapter(teas) { menu ->
 
                 }
             }

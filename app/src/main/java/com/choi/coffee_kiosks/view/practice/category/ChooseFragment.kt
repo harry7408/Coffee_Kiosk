@@ -8,6 +8,7 @@ import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentChooseBinding
 import com.choi.coffee_kiosks.util.common.changeFragment
 import com.choi.coffee_kiosks.util.common.changeMenu
+import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.google.android.material.textview.MaterialTextView
 
 class ChooseFragment : BaseFragment<FragmentChooseBinding>(FragmentChooseBinding::inflate) {
@@ -35,6 +36,10 @@ class ChooseFragment : BaseFragment<FragmentChooseBinding>(FragmentChooseBinding
                 this@ChooseFragment,
                 currentFragment
             )
+
+            kioskBottomSheet.chargeImageView.setOnAvoidDuplicateClickWithFlow {
+
+            }
         }
         changeCheckedCategory()
     }
