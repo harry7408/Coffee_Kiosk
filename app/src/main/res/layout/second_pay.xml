@@ -309,7 +309,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_12"
-        android:text="@string/call_cancel_text"
+        android:text="@string/all_cancel_text"
         app:layout_constraintStart_toStartOf="@id/stepTextView"
         app:layout_constraintTop_toBottomOf="@id/payAmountGuideTextView" />
 
