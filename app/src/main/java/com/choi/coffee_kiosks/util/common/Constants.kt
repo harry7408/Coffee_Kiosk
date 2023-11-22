@@ -80,5 +80,7 @@ val desserts = listOf<Menu>(
     Menu("카스테라", 5000L, Type.DESSERT, R.drawable.castella),
 )
 
+const val OPTIONS = "options"
+
 
 

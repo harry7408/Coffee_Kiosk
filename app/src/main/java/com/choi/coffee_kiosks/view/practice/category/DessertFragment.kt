@@ -14,7 +14,7 @@ class DessertFragment: BaseFragment<FragmentDessertBinding>(FragmentDessertBindi
         with(binding) {
             dessertRecyclerView.apply {
                 layoutManager= GridLayoutManager(requireContext(),2)
-                adapter= MenuAdapter(desserts) { name,price,imgId ->
+                adapter= MenuAdapter(desserts) { menu ->
 
                 }
             }

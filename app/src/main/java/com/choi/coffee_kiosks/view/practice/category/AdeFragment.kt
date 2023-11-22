@@ -14,7 +14,7 @@ class AdeFragment : BaseFragment<FragmentAdeBinding>(FragmentAdeBinding::inflate
         with(binding) {
             adeRecyclerView.apply {
                 layoutManager= GridLayoutManager(requireContext(),2)
-                adapter= MenuAdapter(ades) {  name,price,imgId ->
+                adapter= MenuAdapter(ades) { menu ->
 
                 }
             }

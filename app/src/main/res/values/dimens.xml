@@ -26,7 +26,9 @@
     <dimen name="radius_8">8dp</dimen>
 
     <dimen name="peak_200">200dp</dimen>
+    <dimen name="offset_80">80dp</dimen>
     <dimen name="offset_100">100dp</dimen>
+    <dimen name="offset_150">150dp</dimen>
 
     <dimen name="vector_asset_24">24dp</dimen>
     <dimen name="vector_asset_36">36dp</dimen>

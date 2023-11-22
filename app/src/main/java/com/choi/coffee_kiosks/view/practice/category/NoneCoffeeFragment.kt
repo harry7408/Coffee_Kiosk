@@ -8,13 +8,14 @@ import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentNoneCoffeeBinding
 import com.choi.coffee_kiosks.util.common.nonCoffees
 
-class NoneCoffeeFragment: BaseFragment<FragmentNoneCoffeeBinding>(FragmentNoneCoffeeBinding::inflate) {
+class NoneCoffeeFragment :
+    BaseFragment<FragmentNoneCoffeeBinding>(FragmentNoneCoffeeBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         with(binding) {
             nonCoffeeRecyclerView.apply {
-                layoutManager= GridLayoutManager(requireContext(),2)
-                adapter= MenuAdapter(nonCoffees) { name,price,imgId ->
+                layoutManager = GridLayoutManager(requireContext(), 2)
+                adapter = MenuAdapter(nonCoffees) { menu ->
 
                 }
             }

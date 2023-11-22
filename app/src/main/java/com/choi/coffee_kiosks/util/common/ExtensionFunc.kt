@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 import com.choi.coffee_kiosks.R
+import com.choi.coffee_kiosks.base.BaseDialog
 import kotlinx.coroutines.CoroutineScope
 import reactivecircus.flowbinding.android.view.clicks
 import kotlinx.coroutines.Dispatchers
@@ -40,13 +42,14 @@ fun ViewGroup.changeFragment(current: Fragment, new: Fragment) {
         .addToBackStack(null)
         .commit()
 }
+
 fun ViewGroup.changeMenu(current: Fragment, new: Fragment) {
     current.parentFragmentManager.beginTransaction()
         .replace(this.id, new)
         .commit()
 }
 
-fun DialogFragment.setWindowSize(horizontal: Double, vertical : Double) {
+fun DialogFragment.setWindowSize(horizontal: Double, vertical: Double) {
     dialog?.setContentView(R.layout.fragment_free_option)
     dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.WHITE))
     val window = dialog?.window
@@ -57,5 +60,5 @@ fun DialogFragment.setWindowSize(horizontal: Double, vertical : Double) {
     val width = size.x * horizontal
     val height = size.y * vertical
 
-    window?.setLayout(width.toInt(),height.toInt())
+    window?.setLayout(width.toInt(), height.toInt())
 }

@@ -14,7 +14,7 @@ class JuiceFragment : BaseFragment<FragmentJuiceBinding>(FragmentJuiceBinding::i
         with(binding) {
             juiceRecyclerView.apply {
                 layoutManager= GridLayoutManager(requireContext(),2)
-                adapter= MenuAdapter(juices) { name,price,imgId ->
+                adapter= MenuAdapter(juices) { menu ->
 
                 }
             }

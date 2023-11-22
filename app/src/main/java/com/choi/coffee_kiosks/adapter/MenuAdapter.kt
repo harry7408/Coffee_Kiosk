@@ -10,7 +10,7 @@ import com.choi.coffee_kiosks.model.Menu
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 
 class MenuAdapter(private val menus: List<Menu>,
-    private val onClick: (String, Long, Int)->Unit) :
+    private val onClick: (Menu)->Unit) :
     RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuAdapter.MenuViewHolder {
         return MenuViewHolder(
@@ -38,7 +38,7 @@ class MenuAdapter(private val menus: List<Menu>,
                 priceTextView.text = menu.price.toString()+" 원"
 
                 root.setOnAvoidDuplicateClickWithFlow {
-                    onClick(menu.name,menu.price,menu.image)
+                    onClick(menu)
                 }
             }
 
