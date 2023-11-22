@@ -9,32 +9,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.choi.coffee_kiosks.R
+import com.choi.coffee_kiosks.base.BaseDialog
 import com.choi.coffee_kiosks.databinding.FragmentFreeOptionBinding
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
+import com.choi.coffee_kiosks.util.common.setWindowSize
 
-class FreeOptionFragment: DialogFragment() {
-    private lateinit var binding : FragmentFreeOptionBinding
+class FreeOptionFragment: BaseDialog<FragmentFreeOptionBinding>(FragmentFreeOptionBinding::inflate) {
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding=FragmentFreeOptionBinding.inflate(inflater,container,false)
-        val view=binding.root
-        dialog?.setContentView(R.layout.fragment_free_option)
-        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.WHITE))
-        val window = dialog?.window
-        val size = Point()
-        val display = window?.windowManager?.defaultDisplay
-        display?.getSize(size)
-
-        val width = size.x * 0.8
-        val height = size.y * 0.8
-
-        window?.setLayout(width.toInt(),height.toInt())
-
-        return view
+        _binding=FragmentFreeOptionBinding.inflate(inflater,container,false)
+        this@FreeOptionFragment.setWindowSize(0.8,0.8)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -49,6 +39,10 @@ class FreeOptionFragment: DialogFragment() {
 
 
         }
+    }
+
+    private fun initView() {
+
     }
 
 }

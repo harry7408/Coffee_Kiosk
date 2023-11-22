@@ -13,6 +13,7 @@ import androidx.fragment.app.DialogFragment
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.databinding.FragmentShowOptionsBinding
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
+import com.choi.coffee_kiosks.util.common.setWindowSize
 
 class ShowOptionsFragment(private val menu: String, var price: Long, val imgId: Int) :
     DialogFragment() {
@@ -28,25 +29,8 @@ class ShowOptionsFragment(private val menu: String, var price: Long, val imgId: 
         binding = FragmentShowOptionsBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        dialog?.setContentView(R.layout.fragment_show_options)
-        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        val window = dialog?.window
-        val size = Point()
-        val display = window?.windowManager?.defaultDisplay
-        display?.getSize(size)
-
-        val width = size.x * 0.85
-        val height = size.y * 0.85
-
-        window?.setLayout(width.toInt(),height.toInt())
-
-        with(binding) {
-            menuTextView.text = menu
-            countTextView.text = currentCount.toString()
-            amountTextView.text = "$price 원"
-            menuImageView.setImageResource(imgId)
-        }
-
+        this@ShowOptionsFragment.setWindowSize(0.85, 0.85)
+        initView()
         return view
     }
 
@@ -72,7 +56,7 @@ class ShowOptionsFragment(private val menu: String, var price: Long, val imgId: 
 
             minusImageView.setOnAvoidDuplicateClickWithFlow {
                 currentCount--
-                if (currentCount==0) {
+                if (currentCount == 0) {
                     currentCount++
                 }
                 countTextView.text = currentCount.toString()
@@ -84,13 +68,22 @@ class ShowOptionsFragment(private val menu: String, var price: Long, val imgId: 
             }
 
             addFreeTextView.setOnAvoidDuplicateClickWithFlow {
-                val dialog=FreeOptionFragment()
-                dialog.show(childFragmentManager,"tttt")
+                val dialog = FreeOptionFragment()
+                dialog.show(childFragmentManager, "tttt")
             }
 
             cancelButton.setOnAvoidDuplicateClickWithFlow {
                 dismiss()
             }
+        }
+    }
+
+    private fun initView() {
+        with(binding) {
+            menuTextView.text = menu
+            countTextView.text = currentCount.toString()
+            amountTextView.text = "$price 원"
+            menuImageView.setImageResource(imgId)
         }
     }
 

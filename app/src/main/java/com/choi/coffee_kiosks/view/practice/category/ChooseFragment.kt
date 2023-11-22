@@ -39,7 +39,6 @@ class ChooseFragment : BaseFragment<FragmentChooseBinding>(FragmentChooseBinding
         changeCheckedCategory()
     }
 
-
     private fun changeCheckedCategory() {
         for (selected in categoryMap.keys) {
             selected.onAvoidDuplicateClick {
