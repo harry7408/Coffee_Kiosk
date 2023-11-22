@@ -94,7 +94,7 @@
     <string name="order_amount_text">주문 금액</string>
     <string name="discount_amount_text">할인 금액</string>
     <string name="pay_amount_text">결제 금액</string>
-    <string name="call_cancel_text">전체취소</string>
+    <string name="all_cancel_text">전체취소</string>
     <string name="back_text">이전</string>
 
 
