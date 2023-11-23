@@ -46,11 +46,11 @@
     <string name="low_dense_text">연하게</string>
 
     <!-- Options List & Price text -->
-    <string name="hazelnutOptions_text">헤이즐넛 시럽 추가</string>
+    <string name="hazelnutOptions_text">헤이즐넛시럽</string>
     <string name="perlOptions_text">펄 추가</string>
-    <string name="vanillaOptions_text">바닐라 시럽 추가</string>
-    <string name="espressoOptions_text">에스프레소 샷 추가</string>
-    <string name="creamOptions_text">휘핑 크림 추가</string>
+    <string name="vanillaOptions_text">바닐라시럽</string>
+    <string name="espressoOptions_text">샷 추가</string>
+    <string name="creamOptions_text">휘핑크림</string>
     <string name="price_500">500원</string>
     <string name="price_700">700원</string>
     <string name="price_900">900원</string>

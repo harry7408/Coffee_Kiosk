@@ -1,9 +1,6 @@
 package com.choi.coffee_kiosks.adapter
 
-import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemKioskPlaceBinding

@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/margin_32"
-    android:layout_marginEnd="@dimen/margin_32"
-    android:layout_marginTop="@dimen/margin_32"
-    android:layout_marginBottom="@dimen/margin_32"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    android:layout_marginTop="@dimen/margin_24"
+    android:layout_marginBottom="@dimen/margin_24"
     android:background="@color/theme_color">
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -85,6 +85,18 @@
         app:layout_constraintTop_toBottomOf="@id/menuImageView"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/icedOnlyButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuImageView"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_24"
+        android:text="@string/ice_only_text"
+        android:visibility="gone"/>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/coldButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -103,9 +115,9 @@
         android:text="유료옵션"
         android:textSize="24sp"
         android:layout_marginStart="@dimen/margin_24"
-        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_96"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/hotButton"/>
+        app:layout_constraintTop_toBottomOf="@id/menuImageView"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/addPayTextView"

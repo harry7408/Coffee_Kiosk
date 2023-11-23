@@ -25,6 +25,7 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -42,6 +43,7 @@ class KioskPlaceInfoFragment :
     private lateinit var googleMap: GoogleMap
 
     private var placeAdapter = KioskPlaceAdapter(emptyList(), { latLng ->
+        collapseBottomSheet()
         googleMap.moveCamera(
             CameraUpdateFactory
                 .newLatLngZoom(LatLng(latLng.latitude, latLng.longitude), 15.0F)
@@ -148,5 +150,10 @@ class KioskPlaceInfoFragment :
                     .title(kioskPositons.facility)
             )
         }
+    }
+
+    private fun collapseBottomSheet() {
+        val bottomSheet=BottomSheetBehavior.from(binding.bottomSheet.root)
+        bottomSheet.state=BottomSheetBehavior.STATE_COLLAPSED
     }
 }
