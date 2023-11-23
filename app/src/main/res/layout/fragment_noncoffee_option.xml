@@ -33,8 +33,8 @@
         android:text="@string/price_500"
         android:textSize="@dimen/text_size_20"
         app:layout_constraintBottom_toBottomOf="@id/espressoOptionsTextView"
-        app:layout_constraintEnd_toStartOf="@+id/espressoMinusImageView"
-        app:layout_constraintStart_toEndOf="@id/espressoOptionsTextView"
+        app:layout_constraintStart_toStartOf="@id/vanillaPriceTextView"
+        app:layout_constraintEnd_toEndOf="@id/vanillaPriceTextView"
         app:layout_constraintTop_toTopOf="@id/espressoOptionsTextView" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -94,8 +94,8 @@
         android:text="@string/price_500"
         android:textSize="@dimen/text_size_20"
         app:layout_constraintBottom_toBottomOf="@id/vanillaOptionsTextView"
-        app:layout_constraintEnd_toEndOf="@+id/espressoPriceTextView"
-        app:layout_constraintStart_toStartOf="@+id/espressoPriceTextView"
+        app:layout_constraintEnd_toStartOf="@+id/vanillaMinusImageView"
+        app:layout_constraintStart_toEndOf="@+id/vanillaOptionsTextView"
         app:layout_constraintTop_toTopOf="@id/vanillaOptionsTextView" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -155,8 +155,8 @@
         android:text="@string/price_900"
         android:textSize="@dimen/text_size_20"
         app:layout_constraintBottom_toBottomOf="@id/creamOptionsTextView"
-        app:layout_constraintEnd_toEndOf="@+id/espressoPriceTextView"
-        app:layout_constraintStart_toStartOf="@+id/espressoPriceTextView"
+        app:layout_constraintEnd_toEndOf="@+id/vanillaPriceTextView"
+        app:layout_constraintStart_toStartOf="@+id/vanillaPriceTextView"
         app:layout_constraintTop_toTopOf="@id/creamOptionsTextView" />
 
     <com.google.android.material.imageview.ShapeableImageView

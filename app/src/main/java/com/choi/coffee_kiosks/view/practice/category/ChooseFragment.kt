@@ -8,7 +8,7 @@ import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentChooseBinding
 import com.choi.coffee_kiosks.util.common.changeFragment
 import com.choi.coffee_kiosks.util.common.changeMenu
-import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
+import com.choi.coffee_kiosks.view.practice.dialog.BottomGuideFragment
 import com.google.android.material.textview.MaterialTextView
 
 class ChooseFragment : BaseFragment<FragmentChooseBinding>(FragmentChooseBinding::inflate) {
@@ -37,9 +37,12 @@ class ChooseFragment : BaseFragment<FragmentChooseBinding>(FragmentChooseBinding
                 currentFragment
             )
 
-            kioskBottomSheet.chargeImageView.setOnAvoidDuplicateClickWithFlow {
-
+            binding.kioskBottomSheet.fragmentContainer.apply {
+                childFragmentManager.beginTransaction()
+                    .add(R.id.fragmentContainer, BottomGuideFragment())
+                    .commit()
             }
+
         }
         changeCheckedCategory()
     }
