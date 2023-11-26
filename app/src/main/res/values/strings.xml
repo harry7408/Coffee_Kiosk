@@ -97,5 +97,8 @@
     <string name="all_cancel_text">전체취소</string>
     <string name="back_text">이전</string>
 
+    <!-- Mission Fragment text -->
+    <string name="mission_title_text">미션 목록</string>
+
 
 </resources>

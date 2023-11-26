@@ -16,6 +16,7 @@ const val BASE_URL = "https://api.odcloud.kr/api/"
 const val API_KEY =
     "Infuser sUXB37g6xS7shINsa1ElGsLUCYuBrRRDitqWNQzYYVv3CBOLdHi+MCivy40pwovZukCMMKlb2ufKV0w0AdV+Tg=="
 
+const val FIREBASE_BASE_URL="https://firestore.googleapis.com/v1/"
 
 // 키오스크 설치 구역 위치 좌표
 val places = hashMapOf(
