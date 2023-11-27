@@ -99,6 +99,8 @@
 
     <!-- Mission Fragment text -->
     <string name="mission_title_text">미션 목록</string>
+    <string name="mission_start_text">미션 시작</string>
+    <string name="mission_not_exists">미션이 존재하지 않습니다</string>
 
 
 </resources>
