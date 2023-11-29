@@ -2,6 +2,7 @@ package com.choi.coffee_kiosks.model
 
 data class Mission(
     val _id: Value,
+    val name: Value,
     val missionDetail: Value,
     val difficulty: Value,
 )

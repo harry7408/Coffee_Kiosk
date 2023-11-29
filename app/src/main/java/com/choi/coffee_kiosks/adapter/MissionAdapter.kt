@@ -17,7 +17,7 @@ class MissionAdapter(
         fun bind(mission: Document) {
             with(binding) {
                 missionNumberTextView.text = mission.fields._id.integerValue
-                difficultyTextView.text=mission.fields.difficulty.stringValue
+                difficultyTextView.text = mission.fields.difficulty.stringValue
 
                 startButton.setOnAvoidDuplicateClickWithFlow {
                     onClick(mission)
