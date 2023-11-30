@@ -1,4 +1,4 @@
-package com.choi.coffee_kiosks.rest
+package com.choi.coffee_kiosks.network
 
 import com.choi.coffee_kiosks.util.common.FIREBASE_BASE_URL
 import com.google.gson.GsonBuilder

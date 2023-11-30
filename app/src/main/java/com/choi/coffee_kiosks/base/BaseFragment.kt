@@ -1,5 +1,6 @@
 package com.choi.coffee_kiosks.base
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.choi.coffee_kiosks.R
+import com.choi.coffee_kiosks.model.Document
 import com.choi.coffee_kiosks.util.common.CLICK_TAG
 import com.choi.coffee_kiosks.util.common.INTERVAL_TIME
 import com.jakewharton.rxbinding4.view.clicks
@@ -59,5 +62,14 @@ abstract class BaseFragment<VB : ViewBinding>(
                     Log.e(CLICK_TAG, it.toString())
                 })
         )
+    }
+    val showMission = {document: Document ->
+        AlertDialog.Builder(requireContext())
+            .run {
+                setMessage(document.fields.missionDetail.stringValue)
+                    .setPositiveButton(R.string.dialog_ok_text,null)
+                    .setNegativeButton(R.string.cancel_text,null)
+                    .create().show()
+            }
     }
 }

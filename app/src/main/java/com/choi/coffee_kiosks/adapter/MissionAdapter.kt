@@ -9,18 +9,22 @@ import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 
 class MissionAdapter(
     private val missions: List<Document>,
-    private val onClick: (Document) -> Unit
+    private val onClick: (Document) -> Unit,
+    private val missionStart : (Document)->Unit
 ) : RecyclerView.Adapter<MissionAdapter.MissionViewHolder>() {
 
     inner class MissionViewHolder(private val binding: ItemMissionBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(mission: Document) {
             with(binding) {
-                missionNumberTextView.text = mission.fields._id.integerValue
-                difficultyTextView.text = mission.fields.difficulty.stringValue
+                missionNameTextView.text = mission.fields.name.stringValue
 
-                startButton.setOnAvoidDuplicateClickWithFlow {
+                checkMissionButton.setOnAvoidDuplicateClickWithFlow {
                     onClick(mission)
+                }
+
+                startMissionButton.setOnAvoidDuplicateClickWithFlow {
+                    missionStart(mission)
                 }
             }
         }

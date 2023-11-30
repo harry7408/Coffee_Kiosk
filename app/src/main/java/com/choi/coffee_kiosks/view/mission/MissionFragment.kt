@@ -13,7 +13,6 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(FragmentMissionBind
 
     private lateinit var viewPagerAdapter: ViewPagerAdapter
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -27,7 +26,6 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(FragmentMissionBind
         viewPagerAdapter.addFragment(EasyFragment())
         viewPagerAdapter.addFragment(NormalFragment())
         viewPagerAdapter.addFragment(HardFragment())
-
 
         binding.viewpager2.adapter = viewPagerAdapter
 

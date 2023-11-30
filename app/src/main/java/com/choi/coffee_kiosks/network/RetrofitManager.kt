@@ -1,9 +1,8 @@
-package com.choi.coffee_kiosks.rest
+package com.choi.coffee_kiosks.network
 
 import com.choi.coffee_kiosks.util.common.API_KEY
 import com.choi.coffee_kiosks.util.common.BASE_URL
 import com.google.gson.GsonBuilder
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

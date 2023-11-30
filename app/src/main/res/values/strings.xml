@@ -100,10 +100,14 @@
     <!-- Mission Fragment text -->
     <string name="mission_title_text">미션 목록</string>
     <string name="mission_start_text">미션 시작</string>
+    <string name="mission_check_text">미션 확인</string>
     <string name="mission_not_exists">미션이 존재하지 않습니다</string>
     <string name="easy_text">쉬움</string>
     <string name="normal_text">보통</string>
     <string name="hard_text">어려움</string>
+    <string name="dialog_ok_text">확인</string>
+
+
 
 
 

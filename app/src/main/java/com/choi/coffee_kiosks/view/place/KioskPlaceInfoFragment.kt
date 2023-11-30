@@ -7,15 +7,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.adapter.KioskPlaceAdapter
 import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentKioskPlaceInfoBinding
 import com.choi.coffee_kiosks.model.KioskPosition
-import com.choi.coffee_kiosks.rest.RetrofitManager
-import com.choi.coffee_kiosks.util.common.API_KEY
+import com.choi.coffee_kiosks.network.RetrofitManager
 import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.choi.coffee_kiosks.util.common.places
 import com.choi.coffee_kiosks.util.common.showToastMessage
@@ -26,14 +23,9 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlin.coroutines.CoroutineContext
 
 class KioskPlaceInfoFragment :
     BaseFragment<FragmentKioskPlaceInfoBinding>(FragmentKioskPlaceInfoBinding::inflate),
