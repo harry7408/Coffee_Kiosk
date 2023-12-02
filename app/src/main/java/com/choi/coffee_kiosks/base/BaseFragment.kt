@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.choi.coffee_kiosks.R
@@ -17,6 +18,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
+
 
 typealias FragmentInflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 
@@ -63,13 +65,26 @@ abstract class BaseFragment<VB : ViewBinding>(
                 })
         )
     }
-    val showMission = {document: Document ->
+
+    /**
+     * Show mission : 난이도 별 미션 보기 Diapog
+     */
+
+    val showMission = { document: Document ->
         AlertDialog.Builder(requireContext())
             .run {
                 setMessage(document.fields.missionDetail.stringValue)
-                    .setPositiveButton(R.string.dialog_ok_text,null)
-                    .setNegativeButton(R.string.cancel_text,null)
+                    .setPositiveButton(R.string.dialog_ok_text, null)
+                    .setNegativeButton(R.string.cancel_text, null)
                     .create().show()
             }
+
     }
+
+    fun getBundle(key: String, value: String): Bundle {
+        val bundle = Bundle()
+        bundle.putString(key, value)
+        return bundle
+    }
+
 }

@@ -2,11 +2,12 @@ package com.choi.coffee_kiosks.view.practice.dialog
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.activityViewModels
+import com.choi.coffee_kiosks.MainViewModel
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.databinding.FragmentShowOptionsBinding
 import com.choi.coffee_kiosks.model.Menu
@@ -23,6 +24,11 @@ class ShowOptionsFragment(private val menu: Menu) :
     DialogFragment() {
     private lateinit var binding: FragmentShowOptionsBinding
     private var currentCount = 1
+
+    private var freeOptionsInformation=""
+    private var nonFreeOptionsInformation=""
+
+    val viewModel: MainViewModel by activityViewModels()
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -70,6 +76,8 @@ class ShowOptionsFragment(private val menu: Menu) :
 
             okButton.setOnAvoidDuplicateClickWithFlow {
                 //todo 데이터 전달
+
+
             }
 
             addFreeTextView.setOnAvoidDuplicateClickWithFlow {
@@ -87,8 +95,8 @@ class ShowOptionsFragment(private val menu: Menu) :
                     Type.JUICE -> JuiceOptionFragment(menuName)
                     else -> TeaOptionFragment(menuName)
                 }
-                dialogFragment.isCancelable=true
-                dialogFragment.show(childFragmentManager,null)
+                dialogFragment.isCancelable = true
+                dialogFragment.show(childFragmentManager, null)
             }
 
             cancelButton.setOnAvoidDuplicateClickWithFlow {
@@ -96,8 +104,10 @@ class ShowOptionsFragment(private val menu: Menu) :
                 dismiss()
             }
         }
+
     }
 
+    @SuppressLint("SetTextI18n")
     private fun initView() {
         with(binding) {
             when (menu.type) {
@@ -139,6 +149,7 @@ class ShowOptionsFragment(private val menu: Menu) :
             }
         }
     }
+
 
 }
 

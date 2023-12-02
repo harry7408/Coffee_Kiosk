@@ -5,11 +5,13 @@ data class Mission(
     val name: Value,
     val missionDetail: Value,
     val difficulty: Value,
+    val isSolved: Value,
 )
 
 data class Value(
-    val integerValue: String?,
-    val stringValue: String?
+    val integerValue: Int?,
+    val stringValue: String?,
+    val booleanValue: Boolean?,
 )
 
 data class FirebaseResponse(

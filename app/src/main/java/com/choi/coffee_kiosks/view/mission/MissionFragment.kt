@@ -1,17 +1,22 @@
 package com.choi.coffee_kiosks.view.mission
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.fragment.app.activityViewModels
+import com.choi.coffee_kiosks.MainViewModel
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.adapter.ViewPagerAdapter
 import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentMissionBinding
+import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.google.android.material.tabs.TabLayoutMediator
 
 
 class MissionFragment : BaseFragment<FragmentMissionBinding>(FragmentMissionBinding::inflate) {
 
     private lateinit var viewPagerAdapter: ViewPagerAdapter
+    private val mainViewModel : MainViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -33,5 +38,11 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(FragmentMissionBind
             tab.text=tabList[position]
         }.attach()
 
+    }
+
+
+    override fun onPause() {
+        super.onPause()
+        mainViewModel.missionAnswer=""
     }
 }

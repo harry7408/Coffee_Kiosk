@@ -7,13 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
-import androidx.viewbinding.ViewBinding
 import com.choi.coffee_kiosks.R
-import com.choi.coffee_kiosks.base.BaseDialog
 import kotlinx.coroutines.CoroutineScope
-import reactivecircus.flowbinding.android.view.clicks
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import reactivecircus.flowbinding.android.view.clicks
 
 fun View.setOnAvoidDuplicateClickWithFlow(action: () -> Unit) {
     this.clicks()

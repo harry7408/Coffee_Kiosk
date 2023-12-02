@@ -1,11 +1,9 @@
 package com.choi.coffee_kiosks.util.common
 
-import androidx.fragment.app.Fragment
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.model.Menu
 import com.choi.coffee_kiosks.model.Type
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.material.textview.MaterialTextView
 
 
 const val INTERVAL_TIME = 250L
@@ -82,6 +80,24 @@ val desserts = listOf<Menu>(
 )
 
 const val OPTIONS = "options"
+const val HOME_FRAGMENT="HOME"
+
+// Free Option SharedPref KEYS
+const val FREE_OPTIONS = "FREE_OPTIONS"
+const val ICE_OPTION="ICE"
+const val SUGAR_OPTION="SUGAR"
+const val DENSITY_OPTION="DENSITY"
+
+// Non Free Option SharedPref KEYS
+const val NON_FREE_OPTIONS="NON_FREE_OPTIONS"
+const val HAZELNUT_OPTIONS="HAZELNUT"
+const val PERL_OPTIONS="PERL"
+const val VANILLA_OPTIONS="VANILLA"
+const val SHOT_OPTIONS="SHOT"
+const val CREAM_OPTIONS="CREAM"
+
+
+
 
 
 

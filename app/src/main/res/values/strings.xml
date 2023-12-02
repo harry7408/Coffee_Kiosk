@@ -54,7 +54,7 @@
     <string name="price_500">500원</string>
     <string name="price_700">700원</string>
     <string name="price_900">900원</string>
-    <string name="init_count_text">1</string>
+    <string name="init_count_text">0</string>
 
     <!-- Pay Step 1 text -->
     <string name="step1_text">Step 1.</string>
@@ -108,6 +108,9 @@
     <string name="dialog_ok_text">확인</string>
 
 
+    <!-- Fragment Bundle -->
+    <string name="home_fragment_value">home</string>
+    <string name="mission_fragment_value">mission</string>
 
 
 

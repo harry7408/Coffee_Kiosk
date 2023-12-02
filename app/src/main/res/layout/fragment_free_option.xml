@@ -56,26 +56,29 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_8"
             android:text="@string/one_pump_text"
+            style="@style/chip_style"
             app:layout_constraintStart_toStartOf="@id/line1"
             app:layout_constraintTop_toBottomOf="@id/sugarTextView" />
 
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/spoonTwoChip"
+            android:id="@+id/pumpTwoChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_8"
             android:text="@string/two_pump_text"
+            style="@style/chip_style"
             app:layout_constraintStart_toEndOf="@id/pumpOneChip"
             app:layout_constraintTop_toTopOf="@id/pumpOneChip" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/spoonThreeChip"
+            android:id="@+id/pumpThreeChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_8"
             android:text="@string/three_pump_text"
-            app:layout_constraintStart_toEndOf="@id/spoonTwoChip"
+            style="@style/chip_style"
+            app:layout_constraintStart_toEndOf="@id/pumpTwoChip"
             app:layout_constraintTop_toTopOf="@id/pumpOneChip" />
 
     </com.google.android.material.chip.ChipGroup>
@@ -118,26 +121,29 @@
         android:layout_marginTop="@dimen/margin_8"
         app:singleSelection="true"
         app:layout_constraintStart_toStartOf="@id/iceTextView"
-        app:layout_constraintTop_toBottomOf="@id/iceTextView">
+        app:layout_constraintTop_toBottomOf="@id/iceTextView"
+        >
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/manyButton"
+            android:id="@+id/manyChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_8"
             android:text="@string/many_text"
+            style="@style/chip_style"
             app:layout_constraintStart_toStartOf="@id/line2"
             app:layout_constraintTop_toBottomOf="@id/iceTextView" />
 
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/lessButton"
+            android:id="@+id/lessChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_8"
             android:text="@string/little_text"
-            app:layout_constraintStart_toEndOf="@id/manyButton"
-            app:layout_constraintTop_toTopOf="@id/manyButton" />
+            style="@style/chip_style"
+            app:layout_constraintStart_toEndOf="@id/manyChip"
+            app:layout_constraintTop_toTopOf="@id/manyChip" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -178,6 +184,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_8"
         android:text="@string/low_dense_text"
+        style="@style/chip_style"
         app:layout_constraintStart_toStartOf="@id/line3"
         app:layout_constraintTop_toBottomOf="@id/densityTextView" />
 

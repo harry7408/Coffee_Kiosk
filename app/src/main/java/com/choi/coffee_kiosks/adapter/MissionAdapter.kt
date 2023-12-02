@@ -17,7 +17,7 @@ class MissionAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(mission: Document) {
             with(binding) {
-                missionNameTextView.text = mission.fields.name.stringValue
+                missionNameTextView.text = mission.fields.name.stringValue.toString()
 
                 checkMissionButton.setOnAvoidDuplicateClickWithFlow {
                     onClick(mission)

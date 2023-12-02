@@ -37,4 +37,14 @@
         <item name="android:background">@drawable/background_button_stroke_black</item>
     </style>
 
+    <style name="alert_dialog_theme">
+        <item name="android:textSize">@dimen/text_size_30</item>
+    </style>
+
+    <style name="chip_style">
+        <item name="android:clickable">true</item>
+        <item name="android:checkable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
 </resources>
