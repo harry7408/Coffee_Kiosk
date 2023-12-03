@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 import com.choi.coffee_kiosks.util.common.FREE_OPTIONS
 
 
-class FreeOptionPreference(context: Context) {
+class FreeOptionPreference private constructor(context: Context) {
     private val prefName = FREE_OPTIONS
     private val sharedPrefs: SharedPreferences = context.getSharedPreferences(
         prefName, Context.MODE_PRIVATE
@@ -27,5 +27,18 @@ class FreeOptionPreference(context: Context) {
         val editor = sharedPrefs.edit()
         editor.clear()
         editor.apply()
+    }
+
+    companion object {
+        @Volatile
+        private var INSTANCE: FreeOptionPreference?=null
+
+        fun getInstance(context: Context) : FreeOptionPreference {
+            return INSTANCE ?: synchronized(this) {
+                val instance=FreeOptionPreference(context)
+                INSTANCE=instance
+                instance
+            }
+        }
     }
 }

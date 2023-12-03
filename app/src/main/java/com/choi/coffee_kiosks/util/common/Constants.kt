@@ -96,6 +96,13 @@ const val VANILLA_OPTIONS="VANILLA"
 const val SHOT_OPTIONS="SHOT"
 const val CREAM_OPTIONS="CREAM"
 
+const val HAZELNUT_PRICE="HP"
+const val PERL_PRICE="PP"
+const val VANILLA_PRICE="VP"
+const val SHOT_PRICE="SP"
+const val CREAM_PRICE="CP"
+
+
 
 
 

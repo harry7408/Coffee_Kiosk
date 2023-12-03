@@ -27,4 +27,17 @@ class NonFreeOptionPreference(context: Context) {
         editor.clear()
         editor.apply()
     }
+
+    companion object {
+        @Volatile
+        private var INSTANCE: NonFreeOptionPreference?=null
+
+        fun getInstance(context: Context) : NonFreeOptionPreference {
+            return INSTANCE ?: synchronized(this) {
+                val instance= NonFreeOptionPreference(context)
+                INSTANCE=instance
+                instance
+            }
+        }
+    }
 }

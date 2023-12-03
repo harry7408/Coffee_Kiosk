@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.activityViewModels
-import com.choi.coffee_kiosks.MainViewModel
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.databinding.FragmentShowOptionsBinding
 import com.choi.coffee_kiosks.model.Menu
 import com.choi.coffee_kiosks.model.Type
+import com.choi.coffee_kiosks.model.pref.FreeOptionPreference
+import com.choi.coffee_kiosks.model.pref.NonFreeOptionPreference
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.util.common.setWindowSize
 import com.choi.coffee_kiosks.view.practice.options.AdeOptionFragment
@@ -25,10 +25,12 @@ class ShowOptionsFragment(private val menu: Menu) :
     private lateinit var binding: FragmentShowOptionsBinding
     private var currentCount = 1
 
-    private var freeOptionsInformation=""
-    private var nonFreeOptionsInformation=""
+    private var freeOptionsInformation = ""
+    private var nonFreeOptionsInformation = ""
+    private lateinit var freePreference: FreeOptionPreference
+    private lateinit var nonFreePreference: NonFreeOptionPreference
 
-    val viewModel: MainViewModel by activityViewModels()
+//    val viewModel: MainViewModel by activityViewModels()
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -36,11 +38,14 @@ class ShowOptionsFragment(private val menu: Menu) :
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        val context = requireContext()
         binding = FragmentShowOptionsBinding.inflate(inflater, container, false)
         val view = binding.root
 
         this@ShowOptionsFragment.setWindowSize(0.9, 0.9)
         initView()
+        freePreference = FreeOptionPreference.getInstance(context)
+        nonFreePreference = NonFreeOptionPreference.getInstance(context)
         return view
     }
 
@@ -75,7 +80,7 @@ class ShowOptionsFragment(private val menu: Menu) :
             }
 
             okButton.setOnAvoidDuplicateClickWithFlow {
-                //todo 데이터 전달
+                //todo 데이터 전달 (무료옵션, 유료옵션 -> SharedPreference에서 가져오기)
 
 
             }
@@ -100,11 +105,11 @@ class ShowOptionsFragment(private val menu: Menu) :
             }
 
             cancelButton.setOnAvoidDuplicateClickWithFlow {
-                //todo 지금까지 선택한 것들 해제
+                freePreference.clearData()
+                nonFreePreference.clearData()
                 dismiss()
             }
         }
-
     }
 
     @SuppressLint("SetTextI18n")
@@ -149,7 +154,5 @@ class ShowOptionsFragment(private val menu: Menu) :
             }
         }
     }
-
-
 }
 
