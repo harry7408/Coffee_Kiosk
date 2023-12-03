@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import com.choi.coffee_kiosks.base.BaseDialog
 import com.choi.coffee_kiosks.databinding.FragmentAdeOptionBinding
 import com.choi.coffee_kiosks.model.pref.NonFreeOptionPreference
+import com.choi.coffee_kiosks.util.common.CREAM_OPTIONS
 import com.choi.coffee_kiosks.util.common.CREAM_PRICE
+import com.choi.coffee_kiosks.util.common.PERL_OPTIONS
 import com.choi.coffee_kiosks.util.common.PERL_PRICE
 import com.choi.coffee_kiosks.util.common.SHOT_OPTIONS
 import com.choi.coffee_kiosks.util.common.SHOT_PRICE
@@ -89,7 +91,7 @@ class AdeOptionFragment(private val menu: String) :
 
                 var perlOption = binding.perlOptionsTextView.text.toString() +
                         if (binding.perlCountTextView.text.toString().toInt() > 0) {
-                            binding.espressoCountTextView.text.toString()
+                            binding.perlCountTextView.text.toString()
                         } else "none"
 
                 var creamOption = binding.creamOptionsTextView.text.toString() +
@@ -113,8 +115,8 @@ class AdeOptionFragment(private val menu: String) :
                 val creamPrice = binding.creamCountTextView.text.toString().toInt() * 900
 
                 nonFreePreference.saveData(SHOT_OPTIONS, shotOption)
-                nonFreePreference.saveData(perlOption, perlOption)
-                nonFreePreference.saveData(creamOption, creamOption)
+                nonFreePreference.saveData(PERL_OPTIONS, perlOption)
+                nonFreePreference.saveData(CREAM_OPTIONS, creamOption)
                 nonFreePreference.saveData(SHOT_PRICE, shotPrice.toString())
                 nonFreePreference.saveData(PERL_PRICE, perlPrice.toString())
                 nonFreePreference.saveData(CREAM_PRICE, creamPrice.toString())
@@ -131,10 +133,10 @@ class AdeOptionFragment(private val menu: String) :
                 ((nonFreePreference.getData(SHOT_PRICE)?.toInt() ?: 0) / 500).toString()
 
             perlCountTextView.text =
-                ((nonFreePreference.getData(PERL_PRICE)?.toInt() ?: 0) / 500).toString()
+                ((nonFreePreference.getData(PERL_PRICE)?.toInt() ?: 0) / 700).toString()
 
             creamCountTextView.text =
-                ((nonFreePreference.getData(CREAM_PRICE)?.toInt() ?: 0) / 500).toString()
+                ((nonFreePreference.getData(CREAM_PRICE)?.toInt() ?: 0) / 900).toString()
         }
     }
 }

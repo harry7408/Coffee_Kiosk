@@ -105,6 +105,7 @@ class ShowOptionsFragment(private val menu: Menu) :
             }
 
             cancelButton.setOnAvoidDuplicateClickWithFlow {
+                // 다른 메뉴로 넘어갈 때 sharedPreference를 초기화 해주기 위함
                 freePreference.clearData()
                 nonFreePreference.clearData()
                 dismiss()

@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:background="@color/primary_color"
     android:id="@+id/mainLayout"
+    android:focusable="true"
+    android:clickable="true"
     android:layout_height="match_parent">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

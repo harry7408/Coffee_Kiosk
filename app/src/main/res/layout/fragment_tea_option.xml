@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="@id/espressoOptionsTextView" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/hazelnutMinusImageView"
+        android:id="@+id/espressoMinusImageView"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginEnd="@dimen/margin_8"
