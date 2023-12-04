@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.choi.coffee_kiosks.MainViewModel
+import com.choi.coffee_kiosks.viewModels.MainViewModel
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.adapter.MissionAdapter
 import com.choi.coffee_kiosks.base.BaseFragment

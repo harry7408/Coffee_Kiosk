@@ -4,15 +4,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemSelectedMenuBinding
-import com.choi.coffee_kiosks.model.Menu
+import com.choi.coffee_kiosks.model.SelectedMenu
 
-class SelectedMenuAdapter(private val selectedMenu: List<Menu>
+class SelectedMenuAdapter(private val selectedMenu: List<SelectedMenu>
 ) : RecyclerView.Adapter<SelectedMenuAdapter.SelectedViewHolder>() {
 
     inner class SelectedViewHolder(private val binding: ItemSelectedMenuBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind() {
-
+        fun bind(menu:SelectedMenu) {
+            with(binding) {
+                menuImageView.setImageResource(menu.image)
+                countTextView.text=menu.count.toString()
+            }
         }
     }
 
@@ -28,10 +31,11 @@ class SelectedMenuAdapter(private val selectedMenu: List<Menu>
     }
 
     override fun onBindViewHolder(holder: SelectedViewHolder, position: Int) {
-        holder.bind()
+        holder.bind(selectedMenu[position])
     }
 
     override fun getItemCount(): Int = selectedMenu.size
 
 
 }
+

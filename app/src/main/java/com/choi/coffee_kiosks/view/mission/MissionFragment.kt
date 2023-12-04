@@ -1,15 +1,13 @@
 package com.choi.coffee_kiosks.view.mission
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.activityViewModels
-import com.choi.coffee_kiosks.MainViewModel
+import com.choi.coffee_kiosks.viewModels.MainViewModel
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.adapter.ViewPagerAdapter
 import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentMissionBinding
-import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.google.android.material.tabs.TabLayoutMediator
 
 
