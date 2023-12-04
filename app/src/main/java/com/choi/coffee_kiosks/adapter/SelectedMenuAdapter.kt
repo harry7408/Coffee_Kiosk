@@ -5,8 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemSelectedMenuBinding
 import com.choi.coffee_kiosks.model.SelectedMenu
+import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 
-class SelectedMenuAdapter(private val selectedMenu: List<SelectedMenu>
+class SelectedMenuAdapter(private var selectedMenu: MutableList<SelectedMenu>,
+    private val onItemDeleted: (Int) -> Unit
 ) : RecyclerView.Adapter<SelectedMenuAdapter.SelectedViewHolder>() {
 
     inner class SelectedViewHolder(private val binding: ItemSelectedMenuBinding) :
@@ -15,6 +17,10 @@ class SelectedMenuAdapter(private val selectedMenu: List<SelectedMenu>
             with(binding) {
                 menuImageView.setImageResource(menu.image)
                 countTextView.text=menu.count.toString()
+                deleteImageView.setOnAvoidDuplicateClickWithFlow {
+                   removeItem(absoluteAdapterPosition)
+                    onItemDeleted(menu.price)
+                }
             }
         }
     }
@@ -36,6 +42,11 @@ class SelectedMenuAdapter(private val selectedMenu: List<SelectedMenu>
 
     override fun getItemCount(): Int = selectedMenu.size
 
+
+    fun removeItem(position : Int) {
+        selectedMenu.removeAt(position)
+        notifyItemRemoved(position)
+    }
 
 }
 

@@ -102,6 +102,9 @@ const val VANILLA_PRICE="VP"
 const val SHOT_PRICE="SP"
 const val CREAM_PRICE="CP"
 
+const val TOTAL_PRICE_SK="TOTAL"
+const val TOTAL_PRICE="TOTAL_PRICE"
+
 
 
 

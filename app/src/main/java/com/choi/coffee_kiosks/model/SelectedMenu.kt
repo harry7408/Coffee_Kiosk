@@ -1,7 +1,7 @@
 package com.choi.coffee_kiosks.model
 
 data class SelectedMenu(
-    val price : Long,
     val image : Int,
+    val price : Int,
     val count: Int,
 )

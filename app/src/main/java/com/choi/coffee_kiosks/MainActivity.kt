@@ -8,6 +8,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.choi.coffee_kiosks.databinding.ActivityMainBinding
 import com.choi.coffee_kiosks.model.pref.FreeOptionPreference
 import com.choi.coffee_kiosks.model.pref.NonFreeOptionPreference
+import com.choi.coffee_kiosks.model.pref.TotalPricePreference
 import com.choi.coffee_kiosks.util.common.AppUtil
 import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.choi.coffee_kiosks.view.home.HomeFragment
@@ -42,10 +43,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onPause() {
-        super.onPause()
         val freeOptionPreference=FreeOptionPreference.getInstance(this)
         val nonFreeOptionPreference=NonFreeOptionPreference.getInstance(this)
+        val totalPricePreference=TotalPricePreference.getInstance(this)
         freeOptionPreference.clearData()
         nonFreeOptionPreference.clearData()
+        totalPricePreference.clearData()
+        Log.d(LOG_TAG,"On pause Called")
+        super.onPause()
     }
 }

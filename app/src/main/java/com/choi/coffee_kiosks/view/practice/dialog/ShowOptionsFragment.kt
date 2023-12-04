@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModelProvider
 import com.choi.coffee_kiosks.viewModels.MainViewModel
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.databinding.FragmentShowOptionsBinding
@@ -16,6 +17,7 @@ import com.choi.coffee_kiosks.model.SelectedMenu
 import com.choi.coffee_kiosks.model.Type
 import com.choi.coffee_kiosks.model.pref.FreeOptionPreference
 import com.choi.coffee_kiosks.model.pref.NonFreeOptionPreference
+import com.choi.coffee_kiosks.model.pref.TotalPricePreference
 import com.choi.coffee_kiosks.util.common.CREAM_OPTIONS
 import com.choi.coffee_kiosks.util.common.CREAM_PRICE
 import com.choi.coffee_kiosks.util.common.DENSITY_OPTION
@@ -28,6 +30,7 @@ import com.choi.coffee_kiosks.util.common.PERL_PRICE
 import com.choi.coffee_kiosks.util.common.SHOT_OPTIONS
 import com.choi.coffee_kiosks.util.common.SHOT_PRICE
 import com.choi.coffee_kiosks.util.common.SUGAR_OPTION
+import com.choi.coffee_kiosks.util.common.TOTAL_PRICE
 import com.choi.coffee_kiosks.util.common.VANILLA_OPTIONS
 import com.choi.coffee_kiosks.util.common.VANILLA_PRICE
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
@@ -38,6 +41,7 @@ import com.choi.coffee_kiosks.view.practice.options.JuiceOptionFragment
 import com.choi.coffee_kiosks.view.practice.options.NonCoffeeOptionFragment
 import com.choi.coffee_kiosks.view.practice.options.TeaOptionFragment
 import com.choi.coffee_kiosks.viewModels.SelectedMenuViewModel
+import com.choi.coffee_kiosks.viewModels.TotalPriceViewModel
 
 class ShowOptionsFragment(private val menu: Menu) :
     DialogFragment() {
@@ -48,6 +52,7 @@ class ShowOptionsFragment(private val menu: Menu) :
     private var nonFreeOptionsInformation = ""
     private lateinit var freePreference: FreeOptionPreference
     private lateinit var nonFreePreference: NonFreeOptionPreference
+    private lateinit var totalPricePreference: TotalPricePreference
 
     private val viewModel: MainViewModel by activityViewModels()
     private val selectedViewModel: SelectedMenuViewModel by activityViewModels()
@@ -65,7 +70,9 @@ class ShowOptionsFragment(private val menu: Menu) :
         this@ShowOptionsFragment.setWindowSize(0.9, 0.9)
         freePreference = FreeOptionPreference.getInstance(context)
         nonFreePreference = NonFreeOptionPreference.getInstance(context)
+        totalPricePreference = TotalPricePreference.getInstance(context)
         initView()
+
         return view
     }
 
@@ -125,14 +132,14 @@ class ShowOptionsFragment(private val menu: Menu) :
                 Log.d(LOG_TAG, "COURSE : ${viewModel.missionCourse}")
 
                 val menuPrice = binding.amountTextView.text.toString().run {
-                    this.subSequence(0, this.length - 2).toString().toLong()
+                    this.subSequence(0, this.length - 2).toString().toInt()
                 }
 
                 val hazelNutOptionPrice = (nonFreePreference.getData(HAZELNUT_PRICE) ?: "").run {
                     if (this == "") {
                         0
                     } else {
-                        this.toLong()
+                        this.toInt()
                     }
                 }
 
@@ -140,7 +147,7 @@ class ShowOptionsFragment(private val menu: Menu) :
                     if (this == "") {
                         0
                     } else {
-                        this.toLong()
+                        this.toInt()
                     }
                 }
 
@@ -148,7 +155,7 @@ class ShowOptionsFragment(private val menu: Menu) :
                     if (this == "") {
                         0
                     } else {
-                        this.toLong()
+                        this.toInt()
                     }
                 }
 
@@ -156,7 +163,7 @@ class ShowOptionsFragment(private val menu: Menu) :
                     if (this == "") {
                         0
                     } else {
-                        this.toLong()
+                        this.toInt()
                     }
                 }
 
@@ -164,13 +171,19 @@ class ShowOptionsFragment(private val menu: Menu) :
                     if (this == "") {
                         0
                     } else {
-                        this.toLong()
+                        this.toInt()
                     }
                 }
 
-                val totalPrice =
-                    menuPrice + hazelNutOptionPrice +
-                            perlOptionPrice + creamOptionPrice + vanillaOptionPrice + shotOptionPrice
+                var totalPrice = totalPricePreference.getData(TOTAL_PRICE)
+                totalPrice += (menuPrice + hazelNutOptionPrice +
+                        perlOptionPrice + creamOptionPrice + vanillaOptionPrice + shotOptionPrice)
+
+                totalPricePreference.saveData(TOTAL_PRICE, totalPrice)
+
+                val currentMenuPrice =
+                    menuPrice + hazelNutOptionPrice + perlOptionPrice + creamOptionPrice
+                +vanillaOptionPrice + shotOptionPrice
 
                 Log.d(LOG_TAG, "menu price : $menuPrice")
                 Log.d(LOG_TAG, "total price : $totalPrice")
@@ -178,12 +191,14 @@ class ShowOptionsFragment(private val menu: Menu) :
 
                 val selectedMenu = SelectedMenu(
                     image = menu.image,
-                    price = totalPrice,
+                    price = currentMenuPrice,
                     count = binding.countTextView.text.toString().toInt()
                 )
 
                 selectedViewModel.addSelectedMenu(selectedMenu)
-
+                freePreference.clearData()
+                nonFreePreference.clearData()
+                totalPricePreference.clearData()
                 dismiss()
             }
 
@@ -210,6 +225,8 @@ class ShowOptionsFragment(private val menu: Menu) :
                 // 다른 메뉴로 넘어갈 때 sharedPreference를 초기화 해주기 위함
                 freePreference.clearData()
                 nonFreePreference.clearData()
+                totalPricePreference.clearData()
+
                 dismiss()
             }
         }
@@ -258,7 +275,5 @@ class ShowOptionsFragment(private val menu: Menu) :
             }
         }
     }
-
-
 }
 
