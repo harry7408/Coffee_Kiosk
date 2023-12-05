@@ -9,8 +9,8 @@
 
     <style name="Theme.Coffee_Kiosks.Splash" parent="Theme.SplashScreen">
 
-        <item name="windowSplashScreenBackground">@color/light_primary_color</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_image</item>
+        <item name="windowSplashScreenBackground">@color/text_icon_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash </item>
         <item name="windowSplashScreenAnimationDuration">@integer/splash_loading_time</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.Coffee_Kiosks</item>
     </style>

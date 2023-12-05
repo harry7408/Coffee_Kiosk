@@ -15,19 +15,10 @@
         android:paddingTop="@dimen/margin_4"
         android:paddingEnd="@dimen/margin_8"
         android:paddingBottom="@dimen/margin_4"
-        android:textSize="@dimen/text_size_30"
+        android:textSize="@dimen/text_size_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="금천구청" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/addressTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_15"
-        app:layout_constraintBaseline_toBaselineOf="@id/facilityTextView"
-        app:layout_constraintStart_toEndOf="@id/facilityTextView"
-        tools:text="서울 특별시 금천구 시흥대로51길 93-32" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/placeTitleTextView"
@@ -51,7 +42,7 @@
         android:paddingTop="@dimen/margin_4"
         android:paddingEnd="@dimen/margin_8"
         android:paddingBottom="@dimen/margin_4"
-        android:textSize="@dimen/text_size_24"
+        android:textSize="@dimen/text_size_20"
         app:layout_constraintBottom_toBottomOf="@+id/placeTitleTextView"
         app:layout_constraintStart_toEndOf="@+id/placeTitleTextView"
         app:layout_constraintTop_toTopOf="@+id/placeTitleTextView"
@@ -79,7 +70,7 @@
         android:paddingTop="@dimen/margin_4"
         android:paddingEnd="@dimen/margin_8"
         android:paddingBottom="@dimen/margin_4"
-        android:textSize="@dimen/text_size_24"
+        android:textSize="@dimen/text_size_20"
         app:layout_constraintBottom_toBottomOf="@+id/departmentTitleTextView"
         app:layout_constraintStart_toEndOf="@+id/departmentTitleTextView"
         app:layout_constraintTop_toTopOf="@+id/departmentTitleTextView"

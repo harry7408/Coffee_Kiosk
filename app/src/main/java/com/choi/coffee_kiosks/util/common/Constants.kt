@@ -14,7 +14,7 @@ const val BASE_URL = "https://api.odcloud.kr/api/"
 const val API_KEY =
     "Infuser sUXB37g6xS7shINsa1ElGsLUCYuBrRRDitqWNQzYYVv3CBOLdHi+MCivy40pwovZukCMMKlb2ufKV0w0AdV+Tg=="
 
-const val FIREBASE_BASE_URL="https://firestore.googleapis.com/v1/"
+const val FIREBASE_BASE_URL = "https://firestore.googleapis.com/v1/"
 
 // 키오스크 설치 구역 위치 좌표
 val places = hashMapOf(
@@ -24,6 +24,26 @@ val places = hashMapOf(
     4 to LatLng(37.4675303, 126.89437),
     5 to LatLng(37.4768503, 126.8918196),
     6 to LatLng(37.4511867, 126.9140346),
+)
+
+val composePosition = hashMapOf<String, LatLng>(
+    "컴포즈커피 가산백상스타타워점" to LatLng(37.4826204, 126.8776612),
+    "컴포즈커피 가산SKV1점" to LatLng(37.4806318, 126.8805702),
+    "컴포즈커피 가산디지털단지역점" to LatLng(37.4813244, 126.8837789),
+    "컴포즈커피 가산로데오점" to LatLng(37.4803905, 126.8867844),
+    "컴포즈커피 가산스카이밸리점" to LatLng(37.4784241, 126.883311),
+    "컴포즈커피 가산월드메르디앙점" to LatLng(37.4777126, 126.8853467),
+    "컴포즈커피 에이스가산타워점" to LatLng(37.4759689, 126.8801495),
+    "컴포즈커피 가산에이스태세라점" to LatLng(37.4725879, 126.8826347),
+    "컴포즈커피 독산대륭테크노타운점" to LatLng(37.4667852, 126.886837),
+    "컴포즈커피 독산롯데시네마점" to LatLng(37.4693385, 126.8971388),
+    "컴포즈커피 정훈단지점" to LatLng(37.4647907, 126.9029142),
+    "컴포즈커피 금천롯데캐슬점" to LatLng(37.4599297, 126.8959328),
+    "컴포즈커피 시흥현대시장점" to LatLng(37.4594495, 126.9052277),
+    "컴포즈커피 금천구청점" to LatLng(37.4552109, 126.8972414),
+    "컴포즈커피 시흥사거리점" to LatLng(37.4545181, 126.9009257),
+    "컴포즈커피 시흥금천점" to LatLng(37.4476883, 126.9024174),
+    "컴포즈커피 시흥은행나무점" to LatLng(37.4508072, 126.9089654),
 )
 
 val telephoneNum = listOf<String>(
@@ -80,30 +100,30 @@ val desserts = listOf<Menu>(
 )
 
 const val OPTIONS = "options"
-const val HOME_FRAGMENT="HOME"
+const val HOME_FRAGMENT = "HOME"
 
 // Free Option SharedPref KEYS
 const val FREE_OPTIONS = "FREE_OPTIONS"
-const val ICE_OPTION="ICE"
-const val SUGAR_OPTION="SUGAR"
-const val DENSITY_OPTION="DENSITY"
+const val ICE_OPTION = "ICE"
+const val SUGAR_OPTION = "SUGAR"
+const val DENSITY_OPTION = "DENSITY"
 
 // Non Free Option SharedPref KEYS
-const val NON_FREE_OPTIONS="NON_FREE_OPTIONS"
-const val HAZELNUT_OPTIONS="HAZELNUT"
-const val PERL_OPTIONS="PERL"
-const val VANILLA_OPTIONS="VANILLA"
-const val SHOT_OPTIONS="SHOT"
-const val CREAM_OPTIONS="CREAM"
+const val NON_FREE_OPTIONS = "NON_FREE_OPTIONS"
+const val HAZELNUT_OPTIONS = "HAZELNUT"
+const val PERL_OPTIONS = "PERL"
+const val VANILLA_OPTIONS = "VANILLA"
+const val SHOT_OPTIONS = "SHOT"
+const val CREAM_OPTIONS = "CREAM"
 
-const val HAZELNUT_PRICE="HP"
-const val PERL_PRICE="PP"
-const val VANILLA_PRICE="VP"
-const val SHOT_PRICE="SP"
-const val CREAM_PRICE="CP"
+const val HAZELNUT_PRICE = "HP"
+const val PERL_PRICE = "PP"
+const val VANILLA_PRICE = "VP"
+const val SHOT_PRICE = "SP"
+const val CREAM_PRICE = "CP"
 
-const val TOTAL_PRICE_SK="TOTAL"
-const val TOTAL_PRICE="TOTAL_PRICE"
+const val TOTAL_PRICE_SK = "TOTAL"
+const val TOTAL_PRICE = "TOTAL_PRICE"
 
 
 

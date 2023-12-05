@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_bottom_sheet_r20"
-    app:behavior_expandedOffset="@dimen/margin_32"
+    app:behavior_expandedOffset="@dimen/full_charge"
     app:behavior_fitToContents="false"
     app:behavior_hideable="false"
-    app:behavior_peekHeight="@dimen/peak_200"
+    app:behavior_peekHeight="@dimen/offset_100"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <View

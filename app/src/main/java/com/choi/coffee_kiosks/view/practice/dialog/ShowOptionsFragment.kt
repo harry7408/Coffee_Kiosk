@@ -198,7 +198,7 @@ class ShowOptionsFragment(private val menu: Menu) :
                 selectedViewModel.addSelectedMenu(selectedMenu)
                 freePreference.clearData()
                 nonFreePreference.clearData()
-                totalPricePreference.clearData()
+//                totalPricePreference.clearData()
                 dismiss()
             }
 

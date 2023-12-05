@@ -8,18 +8,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.adapter.KioskPlaceAdapter
 import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentKioskPlaceInfoBinding
 import com.choi.coffee_kiosks.model.KioskPosition
 import com.choi.coffee_kiosks.network.RetrofitManager
 import com.choi.coffee_kiosks.util.common.LOG_TAG
+import com.choi.coffee_kiosks.util.common.composePosition
 import com.choi.coffee_kiosks.util.common.places
 import com.choi.coffee_kiosks.util.common.showToastMessage
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -36,10 +39,11 @@ class KioskPlaceInfoFragment :
 
     private var placeAdapter = KioskPlaceAdapter(emptyList(), { latLng ->
         collapseBottomSheet()
-        googleMap.moveCamera(
+        googleMap.animateCamera(
             CameraUpdateFactory
                 .newLatLngZoom(LatLng(latLng.latitude, latLng.longitude), 15.0F)
         )
+
     }) { phoneNum ->
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(phoneNum))
         startActivity(intent)
@@ -60,13 +64,9 @@ class KioskPlaceInfoFragment :
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
 
-        val city = LatLng(37.4567667, 126.8954005)
-        googleMap.addMarker(
-            MarkerOptions()
-                .position(city)
-                .title("금천구청")
-        )
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(city, 15.0F))
+        val city =LatLng(37.4675303, 126.89437)
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(city, 14.0F))
+        addCoffeeMarker()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -85,7 +85,7 @@ class KioskPlaceInfoFragment :
                                 requireContext(),
                                 LinearLayoutManager.VERTICAL, false
                             )
-                            adapter=placeAdapter
+                            adapter = placeAdapter
 
                         }
                         setMarker(result.data)
@@ -144,8 +144,19 @@ class KioskPlaceInfoFragment :
         }
     }
 
+    private fun addCoffeeMarker() {
+        composePosition.forEach {
+            googleMap.addMarker(
+                MarkerOptions()
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.coffee_marker))
+                    .position(it.value)
+                    .title(it.key)
+            )
+        }
+    }
+
     private fun collapseBottomSheet() {
-        val bottomSheet=BottomSheetBehavior.from(binding.bottomSheet.root)
-        bottomSheet.state=BottomSheetBehavior.STATE_COLLAPSED
+        val bottomSheet = BottomSheetBehavior.from(binding.bottomSheet.root)
+        bottomSheet.state = BottomSheetBehavior.STATE_COLLAPSED
     }
 }

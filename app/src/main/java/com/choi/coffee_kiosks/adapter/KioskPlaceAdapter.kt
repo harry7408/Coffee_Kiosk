@@ -38,7 +38,6 @@ class KioskPlaceAdapter(
         fun bind(place: KioskPosition) {
             with(binding) {
                 facilityTextView.text = place.facility
-                addressTextView.text = place.address
                 installedPlaceTextView.text = place.installedPlace
                 departmentTextView.text = place.department
 
