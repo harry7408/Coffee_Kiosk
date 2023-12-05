@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemSelectedMenuBinding
-import com.choi.coffee_kiosks.model.SelectedMenu
+import com.choi.coffee_kiosks.data.SelectedMenu
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 
 class SelectedMenuAdapter(private var selectedMenu: MutableList<SelectedMenu>,

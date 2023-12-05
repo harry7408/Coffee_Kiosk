@@ -12,7 +12,7 @@ import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.adapter.KioskPlaceAdapter
 import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentKioskPlaceInfoBinding
-import com.choi.coffee_kiosks.model.KioskPosition
+import com.choi.coffee_kiosks.data.KioskPosition
 import com.choi.coffee_kiosks.network.RetrofitManager
 import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.choi.coffee_kiosks.util.common.composePosition
@@ -63,8 +63,7 @@ class KioskPlaceInfoFragment :
 
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
-
-        val city =LatLng(37.4675303, 126.89437)
+        val city=LatLng(37.4675303, 126.89437)
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(city, 14.0F))
         addCoffeeMarker()
     }
@@ -72,10 +71,10 @@ class KioskPlaceInfoFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         RetrofitManager.kioskPositionService.getInfo()
-            .enqueue(object : Callback<com.choi.coffee_kiosks.model.Response> {
+            .enqueue(object : Callback<com.choi.coffee_kiosks.data.Response> {
                 override fun onResponse(
-                    call: Call<com.choi.coffee_kiosks.model.Response>,
-                    response: Response<com.choi.coffee_kiosks.model.Response>
+                    call: Call<com.choi.coffee_kiosks.data.Response>,
+                    response: Response<com.choi.coffee_kiosks.data.Response>
                 ) {
                     if (response.isSuccessful) {
                         val result = response.body()
@@ -96,7 +95,7 @@ class KioskPlaceInfoFragment :
                 }
 
                 override fun onFailure(
-                    call: Call<com.choi.coffee_kiosks.model.Response>,
+                    call: Call<com.choi.coffee_kiosks.data.Response>,
                     t: Throwable
                 ) {
                     Log.e(LOG_TAG, t.printStackTrace().toString())

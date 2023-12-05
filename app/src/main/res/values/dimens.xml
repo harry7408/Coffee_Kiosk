@@ -20,6 +20,7 @@
     <dimen name="margin_2">2dp</dimen>
     <dimen name="margin_96">96dp</dimen>
 
+    <dimen name="stroke_1">1dp</dimen>
     <dimen name="stroke_2">2dp</dimen>
     <dimen name="stroke_5">5dp</dimen>
     <dimen name="radius_16">16dp</dimen>
@@ -29,8 +30,11 @@
     <dimen name="peak_200">200dp</dimen>
     <dimen name="offset_80">80dp</dimen>
     <dimen name="offset_100">100dp</dimen>
+    <dimen name="offset_120">120dp</dimen>
     <dimen name="offset_150">150dp</dimen>
     <dimen name="offset_165">165dp</dimen>
+    <dimen name="offset_180">180dp</dimen>
+
 
     <dimen name="vector_asset_24">24dp</dimen>
     <dimen name="vector_asset_36">36dp</dimen>

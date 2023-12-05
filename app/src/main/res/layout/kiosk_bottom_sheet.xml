@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:id="@+id/bottomSheet"
     android:background="@drawable/background_bottom_sheet_r20"
-    app:behavior_expandedOffset="@dimen/offset_100"
+    app:behavior_expandedOffset="@dimen/offset_120"
     app:behavior_fitToContents="false"
     app:behavior_hideable="false"
-    app:behavior_peekHeight="@dimen/offset_165"
+    app:behavior_peekHeight="@dimen/offset_180"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <com.google.android.material.imageview.ShapeableImageView

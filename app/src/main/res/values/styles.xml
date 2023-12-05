@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="kiosk_main_button_style">
-        <item name="android:layout_marginStart">@dimen/margin_24</item>
-        <item name="android:layout_marginEnd">@dimen/margin_24</item>
+    <style name="kiosk_main_button_style" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_marginEnd">@dimen/margin_8</item>
+        <item name="android:layout_marginStart">@dimen/margin_8</item>
         <item name="android:layout_marginTop">@dimen/margin_12</item>
         <item name="android:layout_marginBottom">@dimen/margin_12</item>
+        <item name="strokeColor">@color/text_icon_color</item>
+        <item name="strokeWidth">@dimen/stroke_2</item>
+        <item name="android:textColor">@color/text_icon_color</item>
+        <item name="android:radius">@dimen/full_charge</item>
+
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Material3.Button.Corner">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">10%</item>
     </style>
 
     <style name="category_text_style">

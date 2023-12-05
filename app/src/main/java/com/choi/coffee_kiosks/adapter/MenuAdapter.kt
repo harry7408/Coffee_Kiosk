@@ -4,9 +4,8 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.databinding.ItemMenuBinding
-import com.choi.coffee_kiosks.model.Menu
+import com.choi.coffee_kiosks.data.Menu
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 
 class MenuAdapter(private val menus: List<Menu>,

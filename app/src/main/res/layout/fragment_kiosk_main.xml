@@ -49,27 +49,25 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/inStoreButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/verticalGuideLine"
-        app:layout_constraintStart_toStartOf="parent"
         style="@style/kiosk_main_button_style"
-        android:background="@drawable/background_main_button_r16"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
         android:text="@string/inStore_text"
         android:textSize="@dimen/text_size_24"
-        app:layout_constraintTop_toBottomOf="@id/horizontalGuideLine" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verticalGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/horizontalGuideLine"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button.Corner" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/takeoutButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         style="@style/kiosk_main_button_style"
-        android:background="@drawable/background_main_button_r16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="@string/takeOut_text"
         android:textSize="@dimen/text_size_24"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/verticalGuideLine"
-        app:layout_constraintTop_toTopOf="@id/horizontalGuideLine"/>
+        app:layout_constraintTop_toTopOf="@id/horizontalGuideLine"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button.Corner" />
 </androidx.constraintlayout.widget.ConstraintLayout>

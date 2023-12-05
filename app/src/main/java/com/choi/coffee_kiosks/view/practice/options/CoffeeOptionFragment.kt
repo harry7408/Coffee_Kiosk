@@ -6,14 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.choi.coffee_kiosks.base.BaseDialog
 import com.choi.coffee_kiosks.databinding.FragmentCoffeeOptionBinding
-import com.choi.coffee_kiosks.model.pref.NonFreeOptionPreference
-import com.choi.coffee_kiosks.util.common.CREAM_PRICE
+import com.choi.coffee_kiosks.data.pref.NonFreeOptionPreference
 import com.choi.coffee_kiosks.util.common.HAZELNUT_OPTIONS
 import com.choi.coffee_kiosks.util.common.HAZELNUT_PRICE
 import com.choi.coffee_kiosks.util.common.PERL_OPTIONS
 import com.choi.coffee_kiosks.util.common.PERL_PRICE
-import com.choi.coffee_kiosks.util.common.SHOT_OPTIONS
-import com.choi.coffee_kiosks.util.common.SHOT_PRICE
 import com.choi.coffee_kiosks.util.common.VANILLA_OPTIONS
 import com.choi.coffee_kiosks.util.common.VANILLA_PRICE
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow

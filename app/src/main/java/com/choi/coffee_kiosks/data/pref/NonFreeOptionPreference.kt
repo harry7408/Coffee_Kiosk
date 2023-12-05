@@ -1,4 +1,4 @@
-package com.choi.coffee_kiosks.model.pref
+package com.choi.coffee_kiosks.data.pref
 
 import android.content.Context
 import android.content.SharedPreferences

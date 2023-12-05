@@ -8,16 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import com.choi.coffee_kiosks.viewModels.MainViewModel
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.databinding.FragmentShowOptionsBinding
-import com.choi.coffee_kiosks.model.Menu
-import com.choi.coffee_kiosks.model.SelectedMenu
-import com.choi.coffee_kiosks.model.Type
-import com.choi.coffee_kiosks.model.pref.FreeOptionPreference
-import com.choi.coffee_kiosks.model.pref.NonFreeOptionPreference
-import com.choi.coffee_kiosks.model.pref.TotalPricePreference
+import com.choi.coffee_kiosks.data.Menu
+import com.choi.coffee_kiosks.data.SelectedMenu
+import com.choi.coffee_kiosks.data.Type
+import com.choi.coffee_kiosks.data.pref.FreeOptionPreference
+import com.choi.coffee_kiosks.data.pref.NonFreeOptionPreference
+import com.choi.coffee_kiosks.data.pref.TotalPricePreference
 import com.choi.coffee_kiosks.util.common.CREAM_OPTIONS
 import com.choi.coffee_kiosks.util.common.CREAM_PRICE
 import com.choi.coffee_kiosks.util.common.DENSITY_OPTION
@@ -41,7 +40,6 @@ import com.choi.coffee_kiosks.view.practice.options.JuiceOptionFragment
 import com.choi.coffee_kiosks.view.practice.options.NonCoffeeOptionFragment
 import com.choi.coffee_kiosks.view.practice.options.TeaOptionFragment
 import com.choi.coffee_kiosks.viewModels.SelectedMenuViewModel
-import com.choi.coffee_kiosks.viewModels.TotalPriceViewModel
 
 class ShowOptionsFragment(private val menu: Menu) :
     DialogFragment() {

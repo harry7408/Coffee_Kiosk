@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemMissionBinding
-import com.choi.coffee_kiosks.model.Document
+import com.choi.coffee_kiosks.data.Document
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 
 class MissionAdapter(

@@ -6,9 +6,9 @@ import android.util.Log
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.choi.coffee_kiosks.databinding.ActivityMainBinding
-import com.choi.coffee_kiosks.model.pref.FreeOptionPreference
-import com.choi.coffee_kiosks.model.pref.NonFreeOptionPreference
-import com.choi.coffee_kiosks.model.pref.TotalPricePreference
+import com.choi.coffee_kiosks.data.pref.FreeOptionPreference
+import com.choi.coffee_kiosks.data.pref.NonFreeOptionPreference
+import com.choi.coffee_kiosks.data.pref.TotalPricePreference
 import com.choi.coffee_kiosks.util.common.AppUtil
 import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.choi.coffee_kiosks.view.home.HomeFragment

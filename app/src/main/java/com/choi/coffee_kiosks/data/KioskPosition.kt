@@ -1,4 +1,4 @@
-package com.choi.coffee_kiosks.model
+package com.choi.coffee_kiosks.data
 
 import com.google.gson.annotations.SerializedName
 

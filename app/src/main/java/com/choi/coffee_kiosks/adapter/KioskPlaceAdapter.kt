@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemKioskPlaceBinding
-import com.choi.coffee_kiosks.model.KioskPosition
+import com.choi.coffee_kiosks.data.KioskPosition
 import com.choi.coffee_kiosks.util.common.places
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.util.common.telephoneNum

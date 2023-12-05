@@ -1,4 +1,4 @@
-package com.choi.coffee_kiosks.model
+package com.choi.coffee_kiosks.data
 
 data class Mission(
     val _id: Value,

@@ -8,15 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentContainerView
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.base.BaseFragment
-import com.choi.coffee_kiosks.databinding.FragmentBottomGuideBinding
 import com.choi.coffee_kiosks.databinding.FragmentFirstChargeBinding
-import com.choi.coffee_kiosks.model.pref.TotalPricePreference
+import com.choi.coffee_kiosks.data.pref.TotalPricePreference
 import com.choi.coffee_kiosks.util.common.TOTAL_PRICE
 import com.choi.coffee_kiosks.util.common.changeFragment
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
-import com.choi.coffee_kiosks.view.practice.dialog.FreeOptionFragment
 import com.choi.coffee_kiosks.view.practice.dialog.SearchAndJoinFragment
-import com.choi.coffee_kiosks.viewModels.TotalPriceViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class FirstChargeFragment :

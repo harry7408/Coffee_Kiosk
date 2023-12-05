@@ -1,4 +1,4 @@
-package com.choi.coffee_kiosks.model
+package com.choi.coffee_kiosks.data
 
 data class SelectedMenu(
     val image : Int,

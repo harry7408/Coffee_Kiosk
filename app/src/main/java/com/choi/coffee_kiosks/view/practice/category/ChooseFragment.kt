@@ -1,5 +1,7 @@
 package com.choi.coffee_kiosks.view.practice.category
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -47,11 +49,18 @@ class ChooseFragment : BaseFragment<FragmentChooseBinding>(FragmentChooseBinding
         changeCheckedCategory()
     }
 
+    @SuppressLint("ResourceAsColor")
     private fun changeCheckedCategory() {
         for (selected in categoryMap.keys) {
             selected.onAvoidDuplicateClick {
                 focusedCategory?.setBackgroundResource(R.drawable.background_not_choose)
-                selected.setBackgroundResource(R.drawable.background_text_choose)
+                focusedCategory?.setTextColor(Color.BLACK)
+
+                selected.apply {
+                    selected.setBackgroundResource(R.drawable.background_text_choose)
+                    setTextColor(Color.WHITE)
+                }
+
                 focusedCategory = selected
 
                 val fragment = categoryMap[selected]
