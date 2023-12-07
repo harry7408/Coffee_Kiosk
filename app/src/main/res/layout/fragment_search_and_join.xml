@@ -34,6 +34,8 @@
         android:layout_marginStart="@dimen/margin_32"
         android:layout_marginTop="@dimen/margin_16"
         android:maxLength="3"
+        android:gravity="center"
+        android:cursorVisible="false"
         app:layout_constraintEnd_toStartOf="@id/secondPhoneNumEditText"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,6 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
         android:maxLength="4"
+        android:gravity="center"
+        android:cursorVisible="false"
         app:layout_constraintEnd_toStartOf="@id/thirdPhoneNumEditText"
         app:layout_constraintStart_toEndOf="@id/firstPhoneNumEditText"
         app:layout_constraintTop_toTopOf="@id/firstPhoneNumEditText" />
@@ -56,6 +60,8 @@
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginEnd="@dimen/margin_32"
         android:maxLength="4"
+        android:gravity="center"
+        android:cursorVisible="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/secondPhoneNumEditText"
         app:layout_constraintTop_toTopOf="@id/firstPhoneNumEditText" />

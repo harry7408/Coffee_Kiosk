@@ -1,11 +1,12 @@
 package com.choi.coffee_kiosks.util.common
 
+import android.app.Activity
 import android.content.Context
 import com.shashank.sony.fancytoastlib.FancyToast
 import java.util.UUID
 
 fun Context.showToastMessage(message: String) {
-    FancyToast.makeText(this,message,FancyToast.LENGTH_SHORT,
+    FancyToast.makeText(applicationContext,message,FancyToast.LENGTH_SHORT,
         FancyToast.WARNING,false)
 }
 

@@ -90,7 +90,7 @@ class KioskPlaceInfoFragment :
                         setMarker(result.data)
 
                     } else {
-                        requireContext().showToastMessage("에러")
+                        requireActivity().showToastMessage("에러")
                     }
                 }
 

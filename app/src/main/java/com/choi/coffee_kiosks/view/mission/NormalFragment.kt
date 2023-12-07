@@ -2,6 +2,7 @@ package com.choi.coffee_kiosks.view.mission
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.choi.coffee_kiosks.viewModels.MainViewModel
@@ -54,7 +55,7 @@ class NormalFragment : BaseFragment<FragmentNormalBinding>(FragmentNormalBinding
                 }
 
             } else {
-                requireContext().showToastMessage(getString(R.string.mission_not_exists))
+                Toast.makeText(requireActivity(),"데이터가 없습니다", Toast.LENGTH_SHORT).show()
             }
         }
 

@@ -125,6 +125,8 @@ const val CREAM_PRICE = "CP"
 const val TOTAL_PRICE_SK = "TOTAL"
 const val TOTAL_PRICE = "TOTAL_PRICE"
 
+const val JOIN_KEY="JOIN"
+const val READ_KEY="READ"
 
 
 

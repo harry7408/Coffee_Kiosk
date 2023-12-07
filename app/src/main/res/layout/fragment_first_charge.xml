@@ -163,7 +163,8 @@
         android:layout_marginTop="@dimen/margin_16"
         android:gravity="center"
         android:text="@string/user_name_guide_text"
-        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_20"
         app:layout_constraintEnd_toEndOf="@id/phoneCheckCardView"
         app:layout_constraintStart_toStartOf="@id/stepTextView"
         app:layout_constraintTop_toBottomOf="@id/phoneCheckCardView" />
@@ -174,7 +175,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/phone_number_guide_text"
-        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_20"
         app:layout_constraintEnd_toEndOf="@id/barcodeCheckCardView"
         app:layout_constraintStart_toEndOf="@id/userNameGuideTextView"
         app:layout_constraintTop_toTopOf="@id/userNameGuideTextView" />
@@ -185,10 +187,45 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/stamp_guide_text"
-        android:textSize="@dimen/text_size_18"
-        app:layout_constraintEnd_toEndOf="@id/userAddCardView"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/userAddCardView"
         app:layout_constraintStart_toEndOf="@id/phoneNumberGuideTextView"
         app:layout_constraintTop_toTopOf="@id/userNameGuideTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        app:layout_constraintTop_toBottomOf="@id/userNameGuideTextView"
+        app:layout_constraintStart_toStartOf="@id/userNameGuideTextView"
+        app:layout_constraintEnd_toEndOf="@id/userNameGuideTextView"
+        android:text="홍x동"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_18"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phoneNumberTextView"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_15"
+        app:layout_constraintBottom_toBottomOf="@id/userNameTextView"
+        app:layout_constraintEnd_toEndOf="@id/phoneNumberGuideTextView"
+        app:layout_constraintStart_toEndOf="@+id/userNameGuideTextView"
+        app:layout_constraintTop_toTopOf="@id/userNameTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/stampCountTextView"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/stampCountGuideTextView"
+        app:layout_constraintEnd_toEndOf="@id/stampCountGuideTextView"
+        app:layout_constraintTop_toTopOf="@id/userNameTextView"
+        android:text="0"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_18"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottomGuideLine"

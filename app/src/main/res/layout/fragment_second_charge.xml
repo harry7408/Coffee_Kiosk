@@ -258,7 +258,6 @@
         android:id="@+id/orderAmountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1500원"
         android:textColor="@color/color_red"
         android:textSize="@dimen/text_size_18"
         app:layout_constraintEnd_toEndOf="@id/divider"
@@ -302,7 +301,6 @@
         android:id="@+id/payAmountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0원"
         android:textSize="@dimen/text_size_18"
         app:layout_constraintEnd_toEndOf="@id/divider"
         app:layout_constraintTop_toTopOf="@id/payAmountGuideTextView" />
