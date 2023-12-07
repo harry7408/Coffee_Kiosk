@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/payTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="카드결제"
+        android:textStyle="bold"
+        android:textColor="@color/color_red"
+        android:textSize="@dimen/text_size_30"
+        android:layout_marginTop="@dimen/margin_56"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        app:layout_constraintTop_toBottomOf="@id/payTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="결제 할 금액을 눌러주세요."
+        android:textSize="@dimen/text_size_24"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fullPriceGuideTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/messageTextView"
+        android:text="남은 금액"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textSize="@dimen/text_size_20"
+        android:layout_marginStart="@dimen/margin_32"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fullPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/fullPriceGuideTextView"
+        app:layout_constraintBottom_toBottomOf="@id/fullPriceGuideTextView"
+        app:layout_constraintEnd_toStartOf="@id/checkAmountTextView"
+        android:text="ddddd"
+        android:textColor="@color/primary_color"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_20"
+        android:layout_marginEnd="@dimen/margin_16"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/payPriceGuideTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/fullPriceGuideTextView"
+        app:layout_constraintTop_toBottomOf="@id/fullPriceGuideTextView"
+        android:layout_marginTop="@dimen/margin_12"
+        android:text="결제 금액"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/payPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/checkAmountTextView"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:text="ddddd"
+        android:textColor="@color/primary_color"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintTop_toTopOf="@id/payPriceGuideTextView"
+        app:layout_constraintBottom_toBottomOf="@id/payPriceGuideTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/checkAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/full_charge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fullPriceGuideTextView"
+        android:text="남은금액\n전체"
+        android:layout_marginEnd="@dimen/margin_48"
+        android:gravity="center"
+        android:textColor="@color/text_icon_color"
+        android:background="@color/primary_color"
+        app:layout_constraintBottom_toBottomOf="@id/payPriceGuideTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberOneTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/one_text"
+        app:layout_constraintEnd_toStartOf="@id/numberTwoTextView"
+        app:layout_constraintStart_toStartOf="@id/payPriceGuideTextView"
+        app:layout_constraintTop_toBottomOf="@id/payPriceGuideTextView"
+        app:layout_constraintBottom_toTopOf="@id/numberFourTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberTwoTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/two_text"
+        app:layout_constraintEnd_toStartOf="@id/numberThreeTextView"
+        app:layout_constraintStart_toEndOf="@id/numberOneTextView"
+        app:layout_constraintTop_toTopOf="@id/numberOneTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberOneTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberThreeTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:text="@string/three_text"
+        app:layout_constraintEnd_toEndOf="@id/checkAmountTextView"
+        app:layout_constraintStart_toEndOf="@id/numberTwoTextView"
+        app:layout_constraintTop_toTopOf="@id/numberOneTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberOneTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberFourTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/four_text"
+        app:layout_constraintEnd_toStartOf="@id/numberFiveTextView"
+        app:layout_constraintStart_toStartOf="@id/numberOneTextView"
+        app:layout_constraintTop_toBottomOf="@id/numberOneTextView"
+        app:layout_constraintBottom_toTopOf="@id/numberSevenTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberFiveTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/five_text"
+        app:layout_constraintEnd_toStartOf="@id/numberSixTextView"
+        app:layout_constraintStart_toEndOf="@id/numberFourTextView"
+        app:layout_constraintTop_toTopOf="@id/numberFourTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberFourTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberSixTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:text="@string/six_text"
+        app:layout_constraintEnd_toEndOf="@+id/numberThreeTextView"
+        app:layout_constraintStart_toEndOf="@id/numberFiveTextView"
+        app:layout_constraintTop_toTopOf="@id/numberFourTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberFourTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberSevenTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/seven_text"
+        app:layout_constraintEnd_toStartOf="@id/numberEightTextView"
+        app:layout_constraintStart_toStartOf="@id/numberOneTextView"
+        app:layout_constraintTop_toBottomOf="@id/numberFourTextView"
+        app:layout_constraintBottom_toTopOf="@id/deleteAllTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberEightTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/eight_text"
+        app:layout_constraintEnd_toStartOf="@id/numberNineTextView"
+        app:layout_constraintStart_toEndOf="@id/numberSevenTextView"
+        app:layout_constraintTop_toTopOf="@id/numberSevenTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberSevenTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberNineTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:text="@string/nine_text"
+        app:layout_constraintEnd_toEndOf="@+id/numberThreeTextView"
+        app:layout_constraintStart_toEndOf="@id/numberEightTextView"
+        app:layout_constraintTop_toTopOf="@id/numberSevenTextView"
+        app:layout_constraintBottom_toBottomOf="@id/numberSevenTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/deleteAllTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:textSize="@dimen/text_size_30"
+        android:text="@string/delete_text"
+        android:layout_marginBottom="@dimen/margin_16"
+        app:layout_constraintEnd_toStartOf="@id/numberZeroTextView"
+        app:layout_constraintStart_toStartOf="@id/numberOneTextView"
+        app:layout_constraintTop_toBottomOf="@id/numberSevenTextView"
+        app:layout_constraintBottom_toBottomOf="@id/bottomGuideLine"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/numberZeroTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_4"
+        android:text="@string/zero_text"
+        app:layout_constraintEnd_toStartOf="@id/backSpaceTextView"
+        app:layout_constraintStart_toEndOf="@id/deleteAllTextView"
+        app:layout_constraintTop_toTopOf="@id/deleteAllTextView"
+        app:layout_constraintBottom_toBottomOf="@id/deleteAllTextView"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/backSpaceTextView"
+        style="@style/join_number_style"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_4"
+        android:text="@string/backspace_text"
+        app:layout_constraintBottom_toBottomOf="@id/deleteAllTextView"
+        app:layout_constraintEnd_toEndOf="@+id/numberThreeTextView"
+        app:layout_constraintStart_toEndOf="@id/numberZeroTextView"
+        app:layout_constraintTop_toTopOf="@id/deleteAllTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.8"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/halfVerticalGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelButton"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/halfVerticalGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/cancel_text"
+        android:textSize="@dimen/text_size_20"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_24"
+        style="@style/bottom_cancel_button_style"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button.Corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_24"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextButton"
+        android:layout_width="@dimen/full_charge"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/halfVerticalGuideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/text_size_20"
+        android:text="@string/ok_text"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button.Corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_24"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

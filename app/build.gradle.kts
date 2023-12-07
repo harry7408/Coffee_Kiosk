@@ -99,6 +99,9 @@ dependencies {
 
     // ViewPager2
     implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    // Lottie
+    implementation ("com.airbnb.android:lottie:6.2.0")
 }
 //hilt debugging
 kapt {

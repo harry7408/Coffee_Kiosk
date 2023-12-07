@@ -123,6 +123,7 @@ class ShowOptionsFragment(private val menu: Menu) :
                 amountTextView.text = "${menu.price * currentCount} 원"
             }
 
+            // OK 선택완료 눌렀을 때 반응
             okButton.setOnAvoidDuplicateClickWithFlow {
                 val menuAndCount =
                     binding.menuTextView.text.toString() + binding.countTextView.text.toString() + "잔"

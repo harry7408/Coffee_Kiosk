@@ -30,6 +30,7 @@ class EasyFragment : BaseFragment<FragmentEasyBinding>(FragmentEasyBinding::infl
             val missionList = response.body()?.documents
             if (response.isSuccessful) {
                 missionAdapter = MissionAdapter(missionList!!, showMission) {
+                    // 미션에 대한 정보를 viewModel에 저장
                     mainViewModel.missionAnswer = it.fields.missionDetail.stringValue.toString()
 
                     parentFragment?.parentFragmentManager?.beginTransaction().apply {
