@@ -1,11 +1,14 @@
 package com.choi.coffee_kiosks.view.practice.dialog
 
 import android.annotation.SuppressLint
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import com.choi.coffee_kiosks.viewModels.MainViewModel
@@ -74,19 +77,35 @@ class ShowOptionsFragment(private val menu: Menu) :
         return view
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "ResourceAsColor", "ResourceType")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         with(binding) {
-            coldButton.apply {
-                setOnAvoidDuplicateClickWithFlow {
-
+            coldButton.setOnAvoidDuplicateClickWithFlow {
                     menuTextView.text = "${menu.name}(Ice)"
-                    setBackgroundResource(R.drawable.background_text_choose)
+                    val selectedColor=ContextCompat.getColor(requireContext(),R.color.primary_color)
+                    val colorList=ColorStateList.valueOf(selectedColor)
+                    coldButton.backgroundTintList=colorList
+                    coldButton.setTextColor(Color.WHITE)
+
+                    val releaseColor=ContextCompat.getColor(requireContext(),R.color.text_icon_color)
+                    val colors=ColorStateList.valueOf(releaseColor)
+                    hotButton.backgroundTintList=colors
+                    hotButton.setTextColor(Color.RED)
                 }
-            }
+
 
             hotButton.setOnAvoidDuplicateClickWithFlow {
                 menuTextView.text = "${menu.name}(Hot)"
+                val selectedColor=ContextCompat.getColor(requireContext(),R.color.color_red)
+                val colorList=ColorStateList.valueOf(selectedColor)
+               hotButton.backgroundTintList=colorList
+                hotButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.text_icon_color))
+
+                val releaseColor=ContextCompat.getColor(requireContext(),R.color.text_icon_color)
+                val colors=ColorStateList.valueOf(releaseColor)
+                coldButton.backgroundTintList=colors
+                coldButton.setTextColor(ContextCompat.getColor(requireContext(),R.color.primary_color))
+
             }
 
             plusImageView.setOnAvoidDuplicateClickWithFlow {
@@ -105,7 +124,6 @@ class ShowOptionsFragment(private val menu: Menu) :
             }
 
             okButton.setOnAvoidDuplicateClickWithFlow {
-                //todo 데이터 전달 (무료옵션, 유료옵션 -> SharedPreference에서 가져오기)
                 val menuAndCount =
                     binding.menuTextView.text.toString() + binding.countTextView.text.toString() + "잔"
 
@@ -123,11 +141,6 @@ class ShowOptionsFragment(private val menu: Menu) :
 
                 // 선택한 메뉴 보내기
                 viewModel.missionCourse += (menuAndCount + freeOptionsInformation + nonFreeOptionsInformation)
-
-
-                Log.d(LOG_TAG, "FREE OPTIONS : $freeOptionsInformation")
-                Log.d(LOG_TAG, "NONFREE OPTIONS : $nonFreeOptionsInformation")
-                Log.d(LOG_TAG, "COURSE : ${viewModel.missionCourse}")
 
                 val menuPrice = binding.amountTextView.text.toString().run {
                     this.subSequence(0, this.length - 2).toString().toInt()
@@ -182,10 +195,6 @@ class ShowOptionsFragment(private val menu: Menu) :
                 val currentMenuPrice =
                     menuPrice + hazelNutOptionPrice + perlOptionPrice + creamOptionPrice
                 +vanillaOptionPrice + shotOptionPrice
-
-                Log.d(LOG_TAG, "menu price : $menuPrice")
-                Log.d(LOG_TAG, "total price : $totalPrice")
-                //Todo Bottom Dialog에 데이터 보내기
 
                 val selectedMenu = SelectedMenu(
                     image = menu.image,

@@ -1,12 +1,15 @@
 package com.choi.coffee_kiosks.view.practice.dialog
 
+import android.graphics.Rect
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.adapter.SelectedMenuAdapter
 import com.choi.coffee_kiosks.base.BaseFragment
@@ -65,6 +68,7 @@ class BottomGuideFragment : BaseFragment<FragmentBottomGuideBinding>
                     false
                 )
             observerSetUp()
+            addItemDecoration(RecyclerDecoration(20),LinearLayoutManager.HORIZONTAL)
         }
 
         totalPriceViewModel.totalAmount.observe(viewLifecycleOwner) {
@@ -95,6 +99,22 @@ class BottomGuideFragment : BaseFragment<FragmentBottomGuideBinding>
             totalPricePreference.saveData(TOTAL_PRICE,totalPricePreference.getData(TOTAL_PRICE)-price)
         }
         binding.kioskListRecyclerView.adapter=selectedAdapter
+    }
+
+
+    inner class RecyclerDecoration(private val space: Int) : RecyclerView.ItemDecoration() {
+        override fun getItemOffsets(
+            outRect: Rect,
+            view: View,
+            parent: RecyclerView,
+            state: RecyclerView.State
+        ) {
+            super.getItemOffsets(outRect, view, parent, state)
+            val position=parent.getChildAdapterPosition(view)
+            if (position!=RecyclerView.NO_POSITION) {
+                outRect.right=space
+            }
+        }
     }
 }
 
