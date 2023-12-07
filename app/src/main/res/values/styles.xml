@@ -4,13 +4,27 @@
     <style name="kiosk_main_button_style" parent="Widget.Material3.Button.OutlinedButton">
         <item name="android:layout_marginEnd">@dimen/margin_8</item>
         <item name="android:layout_marginStart">@dimen/margin_8</item>
-        <item name="android:layout_marginTop">@dimen/margin_12</item>
-        <item name="android:layout_marginBottom">@dimen/margin_12</item>
         <item name="strokeColor">@color/text_icon_color</item>
         <item name="strokeWidth">@dimen/stroke_2</item>
         <item name="android:textColor">@color/text_icon_color</item>
         <item name="android:radius">@dimen/full_charge</item>
 
+    </style>
+
+    <style name="bottom_cancel_button_style" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary_color</item>
+        <item name="strokeWidth">@dimen/stroke_2</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:radius">@dimen/full_charge</item>
+
+    </style>
+
+    <style name="bottom_ok_button_style" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary_color</item>
+        <item name="strokeWidth">@dimen/stroke_2</item>
+        <item name="backgroundTint">@color/primary_color</item>
+        <item name="android:textColor">@color/text_icon_color</item>
+        <item name="android:radius">@dimen/full_charge</item>
     </style>
 
     <style name="ShapeAppearanceOverlay.Material3.Button.Corner">
@@ -55,6 +69,7 @@
         <item name="android:clickable">true</item>
         <item name="android:checkable">true</item>
         <item name="android:focusable">true</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
     </style>
 
 </resources>

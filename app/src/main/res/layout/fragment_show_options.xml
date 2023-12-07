@@ -208,6 +208,7 @@
         style="@style/kiosk_main_button_style"
         android:textColor="@color/text_icon_color"
         android:backgroundTint="@color/primary_color"
+        app:strokeColor="@color/primary_color"
         app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button.Corner"
         android:layout_marginEnd="@dimen/margin_32"
         app:layout_constraintStart_toEndOf="@id/cancelButton"

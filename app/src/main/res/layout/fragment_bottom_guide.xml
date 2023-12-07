@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_launcher_background"
         android:background="@drawable/background_stroke_primary"
-        android:text="결제\n 하기"
+        android:text="결제\n하기"
         android:gravity="center"
         android:textSize="@dimen/text_size_40"
         app:layout_constraintStart_toEndOf="@id/totalAmountTextView"
