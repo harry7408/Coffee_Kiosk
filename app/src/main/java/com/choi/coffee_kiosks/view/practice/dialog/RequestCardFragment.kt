@@ -29,7 +29,9 @@ class RequestCardFragment : DialogFragment() {
                 // TODO 주문완료 화면 띄우기
                 val dialog=OrderFinishFragment()
                 dialog.isCancelable=true
-                dialog.show(childFragmentManager,null)
+                dialog.show(parentFragmentManager,null)
+
+                this@RequestCardFragment.dismiss()
             }
         }
     }

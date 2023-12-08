@@ -11,6 +11,11 @@ import com.choi.coffee_kiosks.databinding.FragmentCardCheckDialogBinding
 import com.choi.coffee_kiosks.util.common.TOTAL_PRICE
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.util.common.setWindowSize
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlin.coroutines.coroutineContext
 
 class CardCheckDialogFragment: DialogFragment() {
     private lateinit var binding: FragmentCardCheckDialogBinding
@@ -44,7 +49,10 @@ class CardCheckDialogFragment: DialogFragment() {
                 // 카드 삽입 요청
                 val dialog=RequestCardFragment()
                 dialog.isCancelable=true
-                dialog.show(childFragmentManager,null)
+                dialog.show(parentFragmentManager,null)
+
+                this@CardCheckDialogFragment.dismiss()
+
             }
         }
     }

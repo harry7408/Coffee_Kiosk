@@ -90,7 +90,7 @@ class SecondChargeFragment :
                 //todo 결제 화면 나오고 Dialog 띄운 후 미션 결과 보여주기
                 val dialog=CardCheckDialogFragment()
                 dialog.isCancelable=true
-                dialog.show(childFragmentManager,null)
+                dialog.show(parentFragmentManager,null)
             }
         }
     }

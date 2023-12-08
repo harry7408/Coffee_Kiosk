@@ -35,8 +35,12 @@ class OrderFinishFragment : DialogFragment() {
             delay(1000L)
             val dialog=LastDialogFragment()
             dialog.isCancelable=true
-            dialog.show(childFragmentManager,null)
+            dialog.show(parentFragmentManager,null)
 
+            CoroutineScope(Dispatchers.Main).launch {
+                delay(3000L)
+                dismiss()
+            }
         }
     }
 

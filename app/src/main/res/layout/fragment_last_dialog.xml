@@ -24,7 +24,6 @@
         app:layout_constraintBottom_toBottomOf="@id/payAmountGuideTextView"
         app:layout_constraintStart_toEndOf="@id/payAmountGuideTextView"
         android:layout_marginStart="@dimen/margin_2"
-        android:text="1234원"
         android:textSize="@dimen/text_size_24"
         android:textStyle="bold"/>
 
@@ -73,22 +72,24 @@
         android:layout_marginTop="@dimen/margin_12"/>
 
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
+    <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/noTextView"
-        android:paddingStart="@dimen/margin_56"
-        android:paddingEnd="@dimen/margin_56"
+        android:progressTint="@color/color_green"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginStart="@dimen/margin_56"
+        android:layout_marginEnd="@dimen/margin_56"
         android:layout_marginTop="@dimen/margin_32"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/okButton"
         style="@style/bottom_cancel_button_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/full_charge"
+        android:layout_height="@dimen/full_charge"
         android:text="예"
         android:textColor="@color/primary_color"
         android:textSize="@dimen/text_size_30"
@@ -96,18 +97,24 @@
         app:layout_constraintEnd_toStartOf="@+id/guideLine"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_24"
         android:layout_marginTop="@dimen/margin_56"
         app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button.Corner" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cancelButton"
         style="@style/bottom_cancel_button_style"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/full_charge"
         android:layout_height="wrap_content"
         android:text="아니오"
         android:textSize="@dimen/text_size_30"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_24"
         app:layout_constraintStart_toStartOf="@+id/guideLine"
         app:layout_constraintTop_toTopOf="@id/okButton"
         app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button.Corner" />
