@@ -28,4 +28,17 @@
         app:lottie_rawRes="@raw/input_card"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/requestCardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/inputCardView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="상단에 있는 카드를 눌러주세요"
+        android:textColor="@color/color_red"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_24"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

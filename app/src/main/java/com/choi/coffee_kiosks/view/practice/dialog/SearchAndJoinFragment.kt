@@ -192,6 +192,7 @@ class SearchAndJoinFragment :
         firstPhoneNum.setText("")
         secondPhoneNum.setText("")
         thirdPhoneNum.setText("")
+        firstPhoneNum.requestFocus()
     }
 
 

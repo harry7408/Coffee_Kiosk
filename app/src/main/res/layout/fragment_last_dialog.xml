@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/payAmountGuideTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_32"
+        android:layout_marginStart="@dimen/margin_32"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_24"
+        android:text="결제금액 : "/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/payAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/payAmountGuideTextView"
+        app:layout_constraintBottom_toBottomOf="@id/payAmountGuideTextView"
+        app:layout_constraintStart_toEndOf="@id/payAmountGuideTextView"
+        android:layout_marginStart="@dimen/margin_2"
+        android:text="1234원"
+        android:textSize="@dimen/text_size_24"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/payAmountGuideTextView"
+        app:layout_constraintStart_toStartOf="@id/payAmountGuideTextView"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_20"
+        android:text="결제가 정상적으로 처리되었습니다."
+        android:layout_marginTop="@dimen/margin_12"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/requestReceiptTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/messageTextView"
+        app:layout_constraintStart_toStartOf="@id/payAmountGuideTextView"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_20"
+        android:text="영수증을 출력하시겠습니까?"
+        android:layout_marginTop="@dimen/margin_12"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/okTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/requestReceiptTextView"
+        app:layout_constraintStart_toStartOf="@id/payAmountGuideTextView"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_20"
+        android:text="예 : 출력"
+        android:layout_marginTop="@dimen/margin_12"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/noTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/okTextView"
+        app:layout_constraintStart_toStartOf="@id/payAmountGuideTextView"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_20"
+        android:text="아니오 : 미출력"
+        android:layout_marginTop="@dimen/margin_12"/>
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noTextView"
+        android:paddingStart="@dimen/margin_56"
+        android:paddingEnd="@dimen/margin_56"
+        android:layout_marginTop="@dimen/margin_32"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/okButton"
+        style="@style/bottom_cancel_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="예"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/text_size_30"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        android:layout_marginTop="@dimen/margin_56"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button.Corner" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelButton"
+        style="@style/bottom_cancel_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아니오"
+        android:textSize="@dimen/text_size_30"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideLine"
+        app:layout_constraintTop_toTopOf="@id/okButton"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button.Corner" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
