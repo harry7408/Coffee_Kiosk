@@ -7,21 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.adapter.SelectedMenuAdapter
 import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentBottomGuideBinding
-import com.choi.coffee_kiosks.data.SelectedMenu
-import com.choi.coffee_kiosks.data.pref.TotalPricePreference
+import com.choi.coffee_kiosks.entity.SelectedMenu
+import com.choi.coffee_kiosks.entity.pref.TotalPricePreference
 import com.choi.coffee_kiosks.util.common.TOTAL_PRICE
 import com.choi.coffee_kiosks.util.common.changeFragment
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.view.practice.charge.FirstChargeFragment
-import com.choi.coffee_kiosks.viewModels.SelectedMenuViewModel
-import com.choi.coffee_kiosks.viewModels.TotalPriceViewModel
+import com.choi.coffee_kiosks.viewmodel.SelectedMenuViewModel
+import com.choi.coffee_kiosks.viewmodel.TotalPriceViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class BottomGuideFragment : BaseFragment<FragmentBottomGuideBinding>

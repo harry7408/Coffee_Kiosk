@@ -2,25 +2,19 @@ package com.choi.coffee_kiosks.view.practice.charge
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.base.BaseFragment
-import com.choi.coffee_kiosks.data.User
-import com.choi.coffee_kiosks.data.pref.TotalPricePreference
+import com.choi.coffee_kiosks.entity.pref.TotalPricePreference
 import com.choi.coffee_kiosks.databinding.FragmentSecondChargeBinding
-import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.choi.coffee_kiosks.util.common.TOTAL_PRICE
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.view.practice.dialog.CardCheckDialogFragment
-import com.choi.coffee_kiosks.viewModels.MainViewModel
-import com.choi.coffee_kiosks.viewModels.PhoneNumberViewModel
-import com.choi.coffee_kiosks.viewModels.SelectedMenuViewModel
-import com.choi.coffee_kiosks.viewModels.TotalPriceViewModel
+import com.choi.coffee_kiosks.viewmodel.PhoneNumberViewModel
+import com.choi.coffee_kiosks.viewmodel.SelectedMenuViewModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.shashank.sony.fancytoastlib.FancyToast
 

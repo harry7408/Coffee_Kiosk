@@ -1,8 +1,8 @@
 package com.choi.coffee_kiosks.util.common
 
 import com.choi.coffee_kiosks.R
-import com.choi.coffee_kiosks.data.Menu
-import com.choi.coffee_kiosks.data.Type
+import com.choi.coffee_kiosks.entity.Menu
+import com.choi.coffee_kiosks.entity.Type
 import com.google.android.gms.maps.model.LatLng
 
 

@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemMenuBinding
-import com.choi.coffee_kiosks.data.Menu
+import com.choi.coffee_kiosks.entity.Menu
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 
+// 카페 메뉴 항목을 위한 Adapter
 class MenuAdapter(private val menus: List<Menu>,
     private val onClick: (Menu)->Unit) :
     RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {

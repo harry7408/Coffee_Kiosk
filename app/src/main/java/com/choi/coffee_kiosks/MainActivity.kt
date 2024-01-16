@@ -6,14 +6,14 @@ import android.util.Log
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.choi.coffee_kiosks.databinding.ActivityMainBinding
-import com.choi.coffee_kiosks.data.pref.FreeOptionPreference
-import com.choi.coffee_kiosks.data.pref.NonFreeOptionPreference
-import com.choi.coffee_kiosks.data.pref.TotalPricePreference
+import com.choi.coffee_kiosks.entity.pref.FreeOptionPreference
+import com.choi.coffee_kiosks.entity.pref.NonFreeOptionPreference
+import com.choi.coffee_kiosks.entity.pref.TotalPricePreference
 import com.choi.coffee_kiosks.util.common.AppUtil
 import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.choi.coffee_kiosks.view.home.HomeFragment
-import com.choi.coffee_kiosks.viewModels.MainViewModel
-import com.choi.coffee_kiosks.viewModels.SelectedMenuViewModel
+import com.choi.coffee_kiosks.viewmodel.MainViewModel
+import com.choi.coffee_kiosks.viewmodel.SelectedMenuViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * On pause
+     * App이 종료되면 데이터 Option 관련 Preference 데이터 지우기 (onPause는 호출이 보장)
+     */
     override fun onPause() {
         val freeOptionPreference=FreeOptionPreference.getInstance(this)
         val nonFreeOptionPreference=NonFreeOptionPreference.getInstance(this)

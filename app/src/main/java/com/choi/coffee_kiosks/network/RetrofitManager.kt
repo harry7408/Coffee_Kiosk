@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-// Retrofit 에서 데이터 가져오는 부분은 MVVM 구조로 변경하기
+// 공공 데이터 포털 API 호출을 위한 Retrofit 설정
 object RetrofitManager {
 
     private val gson = GsonBuilder().setLenient().create()

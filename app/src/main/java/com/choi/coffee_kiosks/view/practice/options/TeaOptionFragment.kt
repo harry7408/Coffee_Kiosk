@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.choi.coffee_kiosks.base.BaseDialog
 import com.choi.coffee_kiosks.databinding.FragmentTeaOptionBinding
-import com.choi.coffee_kiosks.data.pref.NonFreeOptionPreference
+import com.choi.coffee_kiosks.entity.pref.NonFreeOptionPreference
 import com.choi.coffee_kiosks.util.common.SHOT_OPTIONS
 import com.choi.coffee_kiosks.util.common.SHOT_PRICE
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow

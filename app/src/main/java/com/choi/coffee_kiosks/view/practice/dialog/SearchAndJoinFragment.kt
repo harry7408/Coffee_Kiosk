@@ -17,7 +17,7 @@ import com.choi.coffee_kiosks.util.common.JOIN_KEY
 import com.choi.coffee_kiosks.util.common.READ_KEY
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.util.common.setWindowSize
-import com.choi.coffee_kiosks.viewModels.PhoneNumberViewModel
+import com.choi.coffee_kiosks.viewmodel.PhoneNumberViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

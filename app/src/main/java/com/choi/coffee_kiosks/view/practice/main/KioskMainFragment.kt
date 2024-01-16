@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import com.choi.coffee_kiosks.viewModels.MainViewModel
+import com.choi.coffee_kiosks.viewmodel.MainViewModel
 import com.choi.coffee_kiosks.base.BaseFragment
 import com.choi.coffee_kiosks.databinding.FragmentKioskMainBinding
 import com.choi.coffee_kiosks.util.common.LOG_TAG

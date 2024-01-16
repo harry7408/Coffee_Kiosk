@@ -1,7 +1,6 @@
-package com.choi.coffee_kiosks.viewModels
+package com.choi.coffee_kiosks.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.choi.coffee_kiosks.util.common.AppUtil
 
 class MainViewModel : ViewModel() {
     var missionAnswer: String = ""

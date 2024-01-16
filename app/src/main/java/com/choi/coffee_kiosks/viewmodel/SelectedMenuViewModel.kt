@@ -1,9 +1,9 @@
-package com.choi.coffee_kiosks.viewModels
+package com.choi.coffee_kiosks.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.choi.coffee_kiosks.data.SelectedMenu
+import com.choi.coffee_kiosks.entity.SelectedMenu
 
 class SelectedMenuViewModel() : ViewModel() {
 

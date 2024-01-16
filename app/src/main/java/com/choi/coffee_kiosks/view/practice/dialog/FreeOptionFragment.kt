@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.base.BaseDialog
 import com.choi.coffee_kiosks.databinding.FragmentFreeOptionBinding
-import com.choi.coffee_kiosks.data.pref.FreeOptionPreference
+import com.choi.coffee_kiosks.entity.pref.FreeOptionPreference
 import com.choi.coffee_kiosks.util.common.DENSITY_OPTION
 import com.choi.coffee_kiosks.util.common.ICE_OPTION
 import com.choi.coffee_kiosks.util.common.SUGAR_OPTION

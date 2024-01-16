@@ -3,7 +3,7 @@ package com.choi.coffee_kiosks.view.mission
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.activityViewModels
-import com.choi.coffee_kiosks.viewModels.MainViewModel
+import com.choi.coffee_kiosks.viewmodel.MainViewModel
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.adapter.ViewPagerAdapter
 import com.choi.coffee_kiosks.base.BaseFragment

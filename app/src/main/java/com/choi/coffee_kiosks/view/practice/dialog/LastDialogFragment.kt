@@ -1,7 +1,6 @@
 package com.choi.coffee_kiosks.view.practice.dialog
 
 import android.annotation.SuppressLint
-import android.app.AlertDialog
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -9,25 +8,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
-import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import com.choi.coffee_kiosks.R
-import com.choi.coffee_kiosks.data.pref.FreeOptionPreference
-import com.choi.coffee_kiosks.data.pref.NonFreeOptionPreference
-import com.choi.coffee_kiosks.data.pref.TotalPricePreference
+import com.choi.coffee_kiosks.entity.pref.FreeOptionPreference
+import com.choi.coffee_kiosks.entity.pref.NonFreeOptionPreference
+import com.choi.coffee_kiosks.entity.pref.TotalPricePreference
 import com.choi.coffee_kiosks.databinding.FragmentLastDialogBinding
 import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.choi.coffee_kiosks.util.common.TOTAL_PRICE
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.util.common.setWindowSize
 import com.choi.coffee_kiosks.view.home.HomeFragment
-import com.choi.coffee_kiosks.view.practice.category.CoffeeFragment
 import com.choi.coffee_kiosks.view.practice.result.FailureFragment
 import com.choi.coffee_kiosks.view.practice.result.SuccessFragment
-import com.choi.coffee_kiosks.viewModels.MainViewModel
-import com.choi.coffee_kiosks.viewModels.PhoneNumberViewModel
-import com.choi.coffee_kiosks.viewModels.SelectedMenuViewModel
+import com.choi.coffee_kiosks.viewmodel.MainViewModel
+import com.choi.coffee_kiosks.viewmodel.PhoneNumberViewModel
+import com.choi.coffee_kiosks.viewmodel.SelectedMenuViewModel
 
 class LastDialogFragment : DialogFragment() {
     private lateinit var binding: FragmentLastDialogBinding

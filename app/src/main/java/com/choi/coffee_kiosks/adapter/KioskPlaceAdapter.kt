@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemKioskPlaceBinding
-import com.choi.coffee_kiosks.data.KioskPosition
+import com.choi.coffee_kiosks.entity.KioskPosition
 import com.choi.coffee_kiosks.util.common.places
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.util.common.telephoneNum
 import com.google.android.gms.maps.model.LatLng
 
+// 키오스크 위치 확인 기능의 BottomSheet 의 항목을 위한 Adapter
 class KioskPlaceAdapter(
     var placeList: List<KioskPosition>,
     private val onClick: (LatLng) -> Unit,

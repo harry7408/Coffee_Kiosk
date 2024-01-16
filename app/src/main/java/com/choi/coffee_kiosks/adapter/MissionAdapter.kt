@@ -4,9 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.choi.coffee_kiosks.databinding.ItemMissionBinding
-import com.choi.coffee_kiosks.data.Document
+import com.choi.coffee_kiosks.entity.Document
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 
+// 미션 목록을 위한 Adapter
 class MissionAdapter(
     private val missions: List<Document>,
     private val onClick: (Document) -> Unit,

@@ -1,8 +1,9 @@
 package com.choi.coffee_kiosks.network
 
-import com.choi.coffee_kiosks.data.Response
+import com.choi.coffee_kiosks.entity.Response
 import retrofit2.Call
 import retrofit2.http.GET
+
 
 interface KioskPositionService {
 

@@ -1,6 +1,6 @@
 package com.choi.coffee_kiosks.network
 
-import com.choi.coffee_kiosks.data.FirebaseResponse
+import com.choi.coffee_kiosks.entity.FirebaseResponse
 import retrofit2.Response
 import retrofit2.http.GET
 

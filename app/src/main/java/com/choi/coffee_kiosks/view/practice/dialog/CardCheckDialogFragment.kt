@@ -6,16 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.choi.coffee_kiosks.data.pref.TotalPricePreference
+import com.choi.coffee_kiosks.entity.pref.TotalPricePreference
 import com.choi.coffee_kiosks.databinding.FragmentCardCheckDialogBinding
 import com.choi.coffee_kiosks.util.common.TOTAL_PRICE
 import com.choi.coffee_kiosks.util.common.setOnAvoidDuplicateClickWithFlow
 import com.choi.coffee_kiosks.util.common.setWindowSize
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlin.coroutines.coroutineContext
 
 class CardCheckDialogFragment: DialogFragment() {
     private lateinit var binding: FragmentCardCheckDialogBinding

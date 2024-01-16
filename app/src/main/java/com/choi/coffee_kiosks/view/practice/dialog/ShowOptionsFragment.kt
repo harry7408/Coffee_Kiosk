@@ -4,29 +4,27 @@ import android.annotation.SuppressLint
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
-import com.choi.coffee_kiosks.viewModels.MainViewModel
+import com.choi.coffee_kiosks.viewmodel.MainViewModel
 import com.choi.coffee_kiosks.R
 import com.choi.coffee_kiosks.databinding.FragmentShowOptionsBinding
-import com.choi.coffee_kiosks.data.Menu
-import com.choi.coffee_kiosks.data.SelectedMenu
-import com.choi.coffee_kiosks.data.Type
-import com.choi.coffee_kiosks.data.pref.FreeOptionPreference
-import com.choi.coffee_kiosks.data.pref.NonFreeOptionPreference
-import com.choi.coffee_kiosks.data.pref.TotalPricePreference
+import com.choi.coffee_kiosks.entity.Menu
+import com.choi.coffee_kiosks.entity.SelectedMenu
+import com.choi.coffee_kiosks.entity.Type
+import com.choi.coffee_kiosks.entity.pref.FreeOptionPreference
+import com.choi.coffee_kiosks.entity.pref.NonFreeOptionPreference
+import com.choi.coffee_kiosks.entity.pref.TotalPricePreference
 import com.choi.coffee_kiosks.util.common.CREAM_OPTIONS
 import com.choi.coffee_kiosks.util.common.CREAM_PRICE
 import com.choi.coffee_kiosks.util.common.DENSITY_OPTION
 import com.choi.coffee_kiosks.util.common.HAZELNUT_OPTIONS
 import com.choi.coffee_kiosks.util.common.HAZELNUT_PRICE
 import com.choi.coffee_kiosks.util.common.ICE_OPTION
-import com.choi.coffee_kiosks.util.common.LOG_TAG
 import com.choi.coffee_kiosks.util.common.PERL_OPTIONS
 import com.choi.coffee_kiosks.util.common.PERL_PRICE
 import com.choi.coffee_kiosks.util.common.SHOT_OPTIONS
@@ -42,7 +40,7 @@ import com.choi.coffee_kiosks.view.practice.options.CoffeeOptionFragment
 import com.choi.coffee_kiosks.view.practice.options.JuiceOptionFragment
 import com.choi.coffee_kiosks.view.practice.options.NonCoffeeOptionFragment
 import com.choi.coffee_kiosks.view.practice.options.TeaOptionFragment
-import com.choi.coffee_kiosks.viewModels.SelectedMenuViewModel
+import com.choi.coffee_kiosks.viewmodel.SelectedMenuViewModel
 
 class ShowOptionsFragment(private val menu: Menu) :
     DialogFragment() {

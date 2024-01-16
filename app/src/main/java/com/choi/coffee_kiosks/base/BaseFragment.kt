@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.choi.coffee_kiosks.R
-import com.choi.coffee_kiosks.data.Document
+import com.choi.coffee_kiosks.entity.Document
 import com.choi.coffee_kiosks.util.common.CLICK_TAG
 import com.choi.coffee_kiosks.util.common.INTERVAL_TIME
 import com.jakewharton.rxbinding4.view.clicks
@@ -17,7 +17,6 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
-
 
 typealias FragmentInflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 
@@ -47,7 +46,7 @@ abstract class BaseFragment<VB : ViewBinding>(
 
     /**
      * On avoid duplicate click
-     * with Rx Binding
+     * Rx 를 활용한 이벤트 처리를 위해 만든 확장 함수
      * @param doOnMainThread : 작업할 내용
      */
     fun View.onAvoidDuplicateClick(doOnMainThread: () -> Unit) {
