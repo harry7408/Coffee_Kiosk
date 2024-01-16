@@ -92,6 +92,23 @@ dependencies {
     implementation("io.github.reactivecircus.flowbinding:flowbinding-recyclerview:1.2.0")
     implementation("io.github.reactivecircus.flowbinding:flowbinding-viewpager2:1.2.0")
 
+    // RxJava
+    implementation ("io.reactivex.rxjava3:rxjava:3.0.3")
+    implementation ("io.reactivex.rxjava3:rxandroid:3.0.0")
+
+    // RxBinding
+    implementation ("com.jakewharton.rxbinding4:rxbinding:4.0.0")
+    implementation ("com.jakewharton.rxbinding4:rxbinding-material:4.0.0")
+    implementation("com.jakewharton.rxbinding4:rxbinding-core:4.0.0")
+    implementation ("com.jakewharton.rxbinding4:rxbinding-appcompat:4.0.0")
+    implementation ("com.jakewharton.rxbinding4:rxbinding-drawerlayout:4.0.0")
+    implementation ("com.jakewharton.rxbinding4:rxbinding-leanback:4.0.0")
+    implementation ("com.jakewharton.rxbinding4:rxbinding-recyclerview:4.0.0")
+    implementation ("com.jakewharton.rxbinding4:rxbinding-slidingpanelayout:4.0.0")
+    implementation ("com.jakewharton.rxbinding4:rxbinding-swiperefreshlayout:4.0.0")
+    implementation ("com.jakewharton.rxbinding4:rxbinding-viewpager:4.0.0")
+    implementation ("com.jakewharton.rxbinding4:rxbinding-viewpager2:4.0.0")
+
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
     implementation("com.google.firebase:firebase-analytics")

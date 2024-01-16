@@ -1,6 +1,5 @@
 package com.choi.coffee_kiosks.util.common
 
-import android.app.Activity
 import android.content.Context
 import com.shashank.sony.fancytoastlib.FancyToast
 import java.util.UUID

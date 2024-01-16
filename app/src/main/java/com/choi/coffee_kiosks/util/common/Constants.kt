@@ -8,8 +8,9 @@ import com.google.android.gms.maps.model.LatLng
 
 const val INTERVAL_TIME = 250L
 const val CLICK_TAG = "ON_CLICK_TAG"
-const val LOG_TAG = "KIOSKS"
 
+
+const val LOG_TAG = "KIOSKS"
 const val BASE_URL = "https://api.odcloud.kr/api/"
 const val API_KEY =
     "Infuser sUXB37g6xS7shINsa1ElGsLUCYuBrRRDitqWNQzYYVv3CBOLdHi+MCivy40pwovZukCMMKlb2ufKV0w0AdV+Tg=="

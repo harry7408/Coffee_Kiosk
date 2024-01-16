@@ -17,6 +17,13 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import reactivecircus.flowbinding.android.view.clicks
 
+/**
+ * Set on avoid duplicate click with flow
+ * FlowBinding 을  활용한 중복 클릭 방지
+ * Throttle 의 인자로 0.25초의 Delay
+ * @param action
+ * @receiver
+ */
 fun View.setOnAvoidDuplicateClickWithFlow(action: () -> Unit) {
     this.clicks()
         .flowOn(Dispatchers.Main)
@@ -27,6 +34,13 @@ fun View.setOnAvoidDuplicateClickWithFlow(action: () -> Unit) {
         }.launchIn(CoroutineScope(Dispatchers.Main))
 }
 
+/**
+ * Throttle first
+ * Throttle First가 Flow 에는 없어 구현 필요
+ * @param T
+ * @param interval
+ * @return
+ */
 private fun <T> Flow<T>.throttleFirst(interval: Long): Flow<T> = flow {
     var throttleTime = 0L
     collect { upstream ->
@@ -51,6 +65,12 @@ fun ViewGroup.changeMenu(current: Fragment, new: Fragment) {
         .commit()
 }
 
+/**
+ * Set window size
+ * @ 메뉴 선택을 위한 Dialog 를 띄울 때 가로 세로를 인자로 받아 창의 크기 설정
+ * @param horizontal
+ * @param vertical
+ */
 fun DialogFragment.setWindowSize(horizontal: Double, vertical: Double) {
     dialog?.setContentView(R.layout.fragment_free_option)
     dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.WHITE))
@@ -64,3 +84,4 @@ fun DialogFragment.setWindowSize(horizontal: Double, vertical: Double) {
 
     window?.setLayout(width.toInt(), height.toInt())
 }
+

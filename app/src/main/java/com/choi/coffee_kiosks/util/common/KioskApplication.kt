@@ -5,7 +5,7 @@ import android.content.Context
 import dagger.hilt.android.HiltAndroidApp
 
 
-// Hilt 는
+// Hilt 초기 세팅
 @HiltAndroidApp
 class KioskApplication() : Application() {
 
