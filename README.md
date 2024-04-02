@@ -37,8 +37,8 @@ https://github.com/harry7408/Coffee_Kiosk/assets/84065395/5c2eb4da-e03c-46f8-87a
 ## 개발 환경 및 언어
 <p align="left">
  <img src="https://img.shields.io/badge/Android Studio Gifffe-3DDC84?style=flat-square&logo=android-studio&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white"/> 
-  - API Level 34
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white"/><br> 
+  - API Level 34<br>
   - Android Giraffe
 </p>
 
